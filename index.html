@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>R.C.K NAIROBI | Divine Transcendence &amp; Community</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#002366",
+                        "primary-container": "#e8edf5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002366",
+                        "on-primary-fixed-variant": "#3f446d",
+                        "primary-fixed": "#dfe0ff",
+                        "primary-fixed-dim": "#bfc3f4",
+                        "inverse-primary": "#bfc3f4",
+                        "secondary": "#FF8C00",
+                        "secondary-container": "#FFF0D0",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#4a2d00",
+                        "on-secondary-fixed-variant": "#8a5a00",
+                        "secondary-fixed": "#FFD699",
+                        "secondary-fixed-dim": "#F5B84C",
+                        "tertiary": "#B22222",
+                        "tertiary-container": "#F5D0D0",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#4a0d0d",
+                        "on-tertiary-fixed-variant": "#7a1a1a",
+                        "tertiary-fixed": "#FFB3B3",
+                        "tertiary-fixed-dim": "#E68080",
+                        "surface": "#ffffff",
+                        "surface-container": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface": "#1a1a1a",
+                        "on-surface-variant": "#46464e",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#ffffff",
+                        "on-background": "#1a1a1a",
+                        "outline": "#77767f",
+                        "outline-variant": "#c7c5cf",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#002366",
+                        "on-primary-container": "#000000",
+                        "on-secondary-container": "#000000",
+                        "on-tertiary-container": "#ffffff",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["\"Source Serif 4\""],
+                        "display-lg-mobile": ["\"Source Serif 4\""],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {
+                            "lineHeight": "56px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "display-lg-mobile": ["36px", {
+                            "lineHeight": "44px",
+                            "fontWeight": "700"
+                        }],
+                        "label-md": ["14px", {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "28px",
+                            "fontWeight": "400"
+                        }],
+                        "headline-sm": ["24px", {
+                            "lineHeight": "32px",
+                            "fontWeight": "600"
+                        }],
+                        "headline-md": ["32px", {
+                            "lineHeight": "40px",
+                            "fontWeight": "600"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .scripture-card {
+            min-width: 280px;
+            scroll-snap-align: start;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 35, 102, 0.5), rgba(0, 35, 102, 0.7));
+        }
+        
+        @keyframes legacyCrossFade {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            33% {
+                opacity: 1;
+            }
+            43% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        
+        .legacy-slideshow-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: legacyCrossFade 12s infinite ease-in-out;
+        }
+        
+        .legacy-slideshow-img:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .legacy-slideshow-img:nth-child(2) {
+            animation-delay: 4s;
+        }
+        .legacy-slideshow-img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-panel.open {
+            left: 0;
+        }
+        
+        .logo-circle {
+            border-radius: 9999px !important;
+            overflow: hidden !important;
+        }
+        .logo-circle img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-headline-md text-headline-md font-bold text-primary">R.C.K NAIROBI</span>
+            <button onclick="closeMobileMenu()" class="text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-2" href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="about.html">About Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="ministries.html">Ministries</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="sermons.html">Sermons</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="events.html">Events</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="contact.html">Contact</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="gallery.html">Gallery</a>
+            <a class="mt-4 inline-block px-6 py-3 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-center" href="#give">GIVE</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-primary/10">
+            <div class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary">location_on</span>
+                <span class="text-sm">NAIROBI, KENYA</span>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utility Top Bar -->
+    <div class="bg-primary text-white py-1.5 sm:py-2 px-3 sm:px-gutter relative z-[60]">
+        <div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center text-[10px] sm:text-[12px] font-label-md tracking-wider gap-1 sm:gap-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] text-secondary">location_on</span>
+                    <span class="hidden xs:inline">NAIROBI, KENYA</span>
+                    <span class="inline xs:hidden">NAIROBI</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3 md:gap-4 border-l border-white/20 pl-3 md:pl-4">
+                    <a class="hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                    <a class="hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            <a class="flex items-center gap-1 sm:gap-2 bg-tertiary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white font-bold hover:bg-secondary transition-all hover:scale-105 text-[9px] sm:text-[12px]" href="#">
+                <span class="material-symbols-outlined text-[12px] sm:text-[16px]">live_tv</span> 
+                <span class="hidden xs:inline">WATCH LIVE</span>
+                <span class="inline xs:hidden">LIVE</span>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Main Navigation Header -->
+    <header class="fixed top-[36px] sm:top-[40px] left-0 w-full z-50 glass-nav border-b border-primary/20 h-16 sm:h-20">
+        <nav class="max-w-container-max mx-auto px-3 sm:px-gutter py-2 sm:py-4 flex justify-between items-center h-full">
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1" onclick="openMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Nav Links Left -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-end pr-4 lg:pr-8">
+                <a class="border-b-2 border-secondary font-bold text-secondary text-sm lg:text-base" href="index.html">HOME</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="about.html">ABOUT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="ministries.html">MINISTRIES</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="sermons.html">SERMONS</a>
+            </div>
+            <!-- Brand Identity - Central Overlapping Logo Container -->
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] bg-white rounded-full border-4 border-secondary shadow-lg flex flex-col items-center justify-center overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 -mb-4 sm:-mb-6 md:-mb-8 logo-circle">
+                    <div class="w-full h-full bg-surface-container flex items-center justify-center group cursor-pointer overflow-hidden logo-circle">
+                        <img src="img/churchlogo.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="#">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full md:hidden">
+                    <span class="text-[8px] sm:text-[10px] font-label-md tracking-[0.3em] text-secondary uppercase">NAIROBI</span>
+                </div>
+            </div>
+            <!-- Nav Links Right -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-start pl-4 lg:pl-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="events.html">EVENTS</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="contact.html">CONTACT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="gallery.html">GALLERY</a>
+                <a class="inline-block px-4 lg:px-6 py-1.5 lg:py-2 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-xs lg:text-sm" href="#give">GIVE</a>
+            </div>
+            <!-- Mobile Action -->
+            <div class="md:hidden flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">volunteer_activism</span>
+                <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[70px] sm:pt-[80px] md:pt-[100px]">
+        <!-- Hero Section -->
+        <section class="relative h-[600px] sm:h-[700px] md:h-[921px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center" data-alt="A grand, cinematic view of a modern church sanctuary during a sunrise service. Golden morning light streams through tall, minimalist glass panels, casting long, ethereal shadows across pristine white rows of seats. The atmosphere is serene and sacred, with a professional architectural photography style emphasizing clean lines and spiritual tranquility in a light-mode color palette."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnK3C8H4YCsdPauWYs0-yOuBjfvntpllAeYD52JD-DoHvupTMdON4wtdRQBqU51QvRJcHTEKlvmbTAg66JdwjGv2iJaQOyH2GEScsWpKJWpTBBSyoNEXPkf6f-EbktaWRkZIdyz3wyviK_q5IANj30YfEevN7BZ9gW2uY2q8AoXrTefyc0CzMM6ULxcGna6KOsTet5X6hJfdkjut3-mwarNjqD--EF_YS1pIj3sPddy8-aGmmYo3uNyw')"></div>
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="relative z-10 text-center text-white px-4 sm:px-gutter max-w-4xl mx-auto space-y-4 sm:space-y-stack-lg">
+                <div class="inline-block px-3 sm:px-4 py-1 border border-secondary/50 rounded-full text-secondary font-label-md text-[10px] sm:text-label-md tracking-widest mb-2 sm:mb-4">
+                    REVIVAL CHURCHES OF KENYA
+                </div>
+                <h1 class="font-display-lg text-[28px] sm:text-[36px] md:text-display-lg leading-tight text-white">
+                    WELCOME TO R.C.K NAIROBI
+                </h1>
+                <p class="font-body-lg text-[14px] sm:text-body-lg text-white/80 max-w-2xl mx-auto px-2">
+                    A Place of Worship, Hope, Love and Transformation. Together, we walk the path of faith and community.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-4 sm:mt-8">
+                    <a class="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-tertiary text-white font-bold rounded-full hover:bg-secondary transition-all flex items-center justify-center gap-2 text-sm sm:text-base" href="#visit">
+                        <span class="material-symbols-outlined text-secondary">map</span> PLAN A VISIT
+                    </a>
+                    <a class="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 border-2 border-secondary/60 text-white font-bold rounded-full hover:bg-secondary/20 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base" href="#live">
+                        <span class="material-symbols-outlined">play_circle</span> WATCH LIVE
+                    </a>
+                </div>
+            </div>
+            <div class="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+                <span class="material-symbols-outlined text-secondary/60 text-3xl sm:text-4xl">expand_more</span>
+            </div>
+        </section>
+
+        <!-- Scripture Carousel Section -->
+        <section class="py-12 sm:py-section-gap bg-surface">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-4 sm:mb-stack-lg">
+                    <div>
+                        <span class="text-secondary font-label-md text-[10px] sm:text-label-md uppercase tracking-widest">The Living Word</span>
+                        <h2 class="font-headline-md text-[20px] sm:text-headline-md text-primary mt-1 sm:mt-2">Nourishment for the Soul</h2>
+                    </div>
+                    <div class="flex gap-2 mt-3 sm:mt-4 md:mt-0">
+                        <button class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-primary" onclick="document.getElementById('scripture-scroll').scrollBy({left: -280, behavior: 'smooth'})">
+                            <span class="material-symbols-outlined text-[20px] sm:text-[24px]">chevron_left</span>
+                        </button>
+                        <button class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-primary" onclick="document.getElementById('scripture-scroll').scrollBy({left: 280, behavior: 'smooth'})">
+                            <span class="material-symbols-outlined text-[20px] sm:text-[24px]">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex gap-3 sm:gap-stack-md overflow-x-auto hide-scrollbar scroll-smooth pb-6 sm:pb-8" id="scripture-scroll" style="scroll-snap-type: x mandatory;">
+                    <!-- Card 1 -->
+                    <div class="scripture-card bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-primary/20 flex flex-col items-center text-center flex-shrink-0 w-[280px] sm:w-[320px]">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">menu_book</span>
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-on-surface mb-4 sm:mb-6">"For I know the plans I have for you, plans to prosper you and not to harm you..."</p>
+                        <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase">Jeremiah 29:11</span>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="scripture-card bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-primary/20 flex flex-col items-center text-center flex-shrink-0 w-[280px] sm:w-[320px]">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">workspace_premium</span>
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-on-surface mb-4 sm:mb-6">"If you believe, you will receive whatever you ask for in prayer."</p>
+                        <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase">Matthew 21:22</span>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="scripture-card bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-primary/20 flex flex-col items-center text-center flex-shrink-0 w-[280px] sm:w-[320px]">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">church</span>
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-on-surface mb-4 sm:mb-6">"I am the way and the truth and the life. No one comes to the Father except through me."</p>
+                        <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase">John 14:6</span>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="scripture-card bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-primary/20 flex flex-col items-center text-center flex-shrink-0 w-[280px] sm:w-[320px]">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">nest_eco_leaf</span>
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-on-surface mb-4 sm:mb-6">"And we know that in all things God works for the good of those who love him."</p>
+                        <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase">Romans 8:28</span>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="scripture-card bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-primary/20 flex flex-col items-center text-center flex-shrink-0 w-[280px] sm:w-[320px]">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">favorite</span>
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-on-surface mb-4 sm:mb-6">"The Lord is my shepherd, I lack nothing."</p>
+                        <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase">Psalms 23</span>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="scripture-card bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-primary/20 flex flex-col items-center text-center flex-shrink-0 w-[280px] sm:w-[320px]">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">badge</span>
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-on-surface mb-4 sm:mb-6">"For God so loved the world that he gave his one and only Son..."</p>
+                        <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase">John 3:16</span>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="scripture-card bg-white p-6 sm:p-10 rounded-xl shadow-sm border border-primary/20 flex flex-col items-center text-center flex-shrink-0 w-[280px] sm:w-[320px]">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">fitness_center</span>
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-on-surface mb-4 sm:mb-6">"I can do all things through Christ who strengthens me."</p>
+                        <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase">Philippians 4:13</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="py-12 sm:py-section-gap bg-surface" id="about">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 items-center">
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl relative z-10 bg-surface-container border border-primary/20">
+                            <img alt="Mathare community members working together" class="legacy-slideshow-img" src="img/revcakefeed.png.jpeg" />
+                            <img alt="Serene church interior during prayer" class="legacy-slideshow-img" src="img/revnyouth.png.jpeg" />
+                            <img alt="Joyful children during a community event" class="legacy-slideshow-img" src="img/allchurch.png.jpeg" />
+                        </div>
+                        <div class="absolute -bottom-6 sm:-bottom-8 -right-6 sm:-right-8 w-40 sm:w-64 h-40 sm:h-64 bg-secondary/20 rounded-2xl -z-10"></div>
+                        <div class="absolute -top-6 sm:-top-8 -left-6 sm:-left-8 border-l-4 border-t-4 border-secondary w-20 sm:w-32 h-20 sm:h-32 -z-10"></div>
+                    </div>
+                    <div class="space-y-3 sm:space-y-stack-md">
+                        <span class="text-secondary font-label-md text-[10px] sm:text-label-md uppercase tracking-widest">About Us</span>
+                        <h2 class="font-headline-md text-[22px] sm:text-headline-md text-primary">A History of Faith &amp; Resilience</h2>
+                        <div class="space-y-3 sm:space-y-4 text-on-surface-variant font-body-md text-sm sm:text-base leading-relaxed">
+                            <p>Revival Churches of Kenya (R.C.K) began as a humble vision to spread the transformative power of the Gospel across the nation. With our headquarters firmly established in the heart of Nakuru, we have grown into a spiritual lighthouse for thousands.</p>
+                            <p>The Nairobi branch was founded in 1990, during a season of great spiritual awakening. Over the past three decades, we have stood as a pillar of hope in our community, dedicated to bringing the light of Christ to every home and heart in Mathare and beyond.</p>
+                            <p class="hidden sm:block">We are more than just a building; we are a family. Under the divine guidance of our leader Rev.Patrick Mrabu and Mrs.Jane Mrabu, we continue to strive for spiritual excellence and community development, ensuring that the legacy of faith continues for generations to come.</p>
+                        </div>
+                        <div class="pt-4 sm:pt-6">
+                            <a href="about.html"><button class="px-6 sm:px-8 py-2.5 sm:py-3 bg-tertiary text-white rounded-lg font-bold hover:bg-secondary transition-all uppercase tracking-wider text-xs sm:text-sm">Discover Our Mission</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ministries -->
+        <section class="py-12 sm:py-section-gap bg-surface" id="ministries">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+                <div class="text-center mb-10 sm:mb-16 max-w-2xl mx-auto">
+                    <span class="text-secondary font-label-md text-[10px] sm:text-label-md uppercase tracking-widest">Be part of our family</span>
+                    <h2 class="font-headline-md text-[22px] sm:text-headline-md text-primary mt-1 sm:mt-2">Ministries That Matter</h2>
+                    <p class="text-on-surface-variant text-sm sm:text-base mt-2 sm:mt-4">Discover your place in our family. We have a place for everyone to grow, serve, and connect.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-gutter">
+                    <!-- Youth Ministry -->
+                    <div class="md:col-span-8 group relative overflow-hidden rounded-2xl h-[300px] sm:h-[400px] border border-primary/20">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxvsqVaZG-WtAH8xvLSm1pN4EGl9HZn6TO-RI72GT4km3Abb_-EUGZxBXllRtzwcMZAwHgol1s5xecpDAj-C1FiLUkliO8zBZNTmbhc9oLvYKI4Cbp_rHqpyIG-75qAJweBmzWKgAWzJqEfShDocyjn_g_V6UPruUPorlCQgOdyTmz8Is-Rc96o7blQQBChf_DfatnV2fa4cY4M5t9_YymNnIq2YQIrGcUycg4xkYu7ME4ZjZuNyrNtg')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 sm:p-10 text-white">
+                            <h3 class="font-headline-sm text-[18px] sm:text-headline-sm mb-1 sm:mb-2 text-secondary">Youth Ministry</h3>
+                            <p class="text-white/80 text-sm sm:text-base max-w-md">Empowering the next generation to lead with faith, courage, and purpose in a modern world.</p>
+                            <a href="ministries.html"><button class="mt-4 sm:mt-6 flex items-center gap-2 font-bold group-hover:gap-4 transition-all text-secondary hover:text-secondary/80 text-sm sm:text-base">Join Us <span class="material-symbols-outlined">arrow_forward</span></button></a>
+                        </div>
+                    </div>
+                    <!-- Choir -->
+                    <div class="md:col-span-4 group relative overflow-hidden rounded-2xl h-[300px] sm:h-[400px] border border-primary/20">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWpxYJZFzSwjlbMgJQqD-EfX_18iPgM8tvWHzq7Vn3PnjfCpMLg1cI3ZzTJdyXqkWHBHQD1FzOH1KkkWWFcmOGyJ4OacDjs_gxH_xL1BD1eJTZcE4zUN5oo5ClPRRJH80usyArQ1Lpmsdh-WAyOwa37L8z4iTVOH0d6Wvn3QSbFvxbcFWyG5wZYg_8FKHszqsvs4VAzpiFQQsB4jfwHFx4L4AE7dH1T9XxI46yv1Dnv6AETVKdqA4yNw')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 sm:p-8 text-white">
+                            <h3 class="font-headline-sm text-[18px] sm:text-headline-sm mb-1 sm:mb-2 text-secondary">RCK Choir</h3>
+                            <p class="text-white/80 text-sm sm:text-base">Lifting spirits through the divine gift of praise and worship.</p>
+                        </div>
+                    </div>
+                    <!-- Sunday School -->
+                    <div class="md:col-span-4 group relative overflow-hidden rounded-2xl h-[300px] sm:h-[400px] border border-primary/20">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6B2rETkOvYQwjZiLYWAQ5gNtOHooTScSyKrExv6yKl6QmT2o08TcemJbCD6ftqAJrh9EKeANgkeoCjp8lJOXNdxIEG3t27Cb3zvFjUIHLu03TcsdY5MK_atII77AQwEO2eS6bafko0FfQvfMSr2fFJg4bsCFldPspneePhGnOoXbuVVTxucp4njmCjeVOLyOiT19lbPUSe3oSkapnALueLFOYakxCLdR5nK7uVQRRMGQ0vbxPBh2NJg')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 sm:p-8 text-white">
+                            <h3 class="font-headline-sm text-[18px] sm:text-headline-sm mb-1 sm:mb-2 text-secondary">Sunday School</h3>
+                            <p class="text-white/80 text-sm sm:text-base">Building a foundation of faith through Bible stories, songs, and play.</p>
+                        </div>
+                    </div>
+                    <!-- Women's Fellowship -->
+                    <div class="md:col-span-8 group relative overflow-hidden rounded-2xl h-[300px] sm:h-[400px] border border-primary/20">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAntnLHB_7YtuAK34BkQy5ACH3FB-hP_OcmenE9SGXoIbY_bwTxACRHj8DIU-m9lOhamEmVQ6oN3gMqBPwvZOgBBBubws2pfWT6WO2bqxQDd6XHrgvbFbWkorOEOsdhahyx3t0SI8qIYAqo77OYoK9XMOi-ZL3IAhpTVppRia8I4tGnMw7MhARWSfzDn0eFtutjeazrFeM-lta6V36KZu-r0vAHIouH-zTF9spMs4SiUmSyr6hss5pqVQ')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 sm:p-10 text-white">
+                            <h3 class="font-headline-sm text-[18px] sm:text-headline-sm mb-1 sm:mb-2 text-secondary">Women's Fellowship</h3>
+                            <p class="text-white/80 text-sm sm:text-base max-w-md">A sisterhood dedicated to spiritual growth, mutual support, and community service.</p>
+                            <a href="ministries.html"><button class="mt-4 sm:mt-6 flex items-center gap-2 font-bold group-hover:gap-4 transition-all text-secondary hover:text-secondary/80 text-sm sm:text-base">Learn More <span class="material-symbols-outlined">arrow_forward</span></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sermons & Worship -->
+        <section class="py-12 sm:py-section-gap overflow-hidden bg-surface" id="sermons">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
+                    <div class="space-y-4 sm:space-y-stack-md">
+                        <span class="text-secondary font-label-md text-[10px] sm:text-label-md tracking-widest">Online Church Family</span>
+                        <h2 class="font-headline-md text-[22px] sm:text-headline-md text-primary">Sermons &amp; Worship</h2>
+                        <p class="text-on-surface-variant text-sm sm:text-body-lg">Can't make it to Church? Dont worry, Our digital doors are always open. Experience the Word of God from anywhere in the world.</p>
+                        <p class="text-on-surface-variant text-sm sm:text-body-lg">You can also watch our previous sermons on youtube, to rejuvinate your soul with the word of God.</p>
+                        <div class="space-y-3 sm:space-y-4 pt-2 sm:pt-4">
+                            <div class="flex items-start gap-3 sm:gap-4">
+                                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 border border-secondary/30">
+                                    <span class="material-symbols-outlined text-secondary text-[18px] sm:text-[24px]">tv</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary text-sm sm:text-base">Live Streaming</h4>
+                                    <p class="text-on-surface-variant text-xs sm:text-sm">Every Sunday from 10:00 AM EAT.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 sm:gap-4">
+                                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 border border-secondary/30">
+                                    <span class="material-symbols-outlined text-secondary text-[18px] sm:text-[24px]">history</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-primary text-sm sm:text-base">Sermon Archive</h4>
+                                    <p class="text-on-surface-variant text-xs sm:text-sm">Access years of transformative teachings on-demand.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                            <a href="#"><button class="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 bg-tertiary text-white font-bold rounded-lg hover:bg-secondary transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+                                <span class="material-symbols-outlined">stream</span> STREAM SERMONS
+                            </button></a>
+                            <a href="#"><button class="w-full sm:w-auto px-6 sm:px-10 py-3 sm:py-4 border border-primary/20 text-primary font-bold rounded-lg hover:bg-primary/10 transition-all text-sm sm:text-base">VIEW ALL SERIES</button></a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="aspect-video bg-inverse-surface rounded-2xl overflow-hidden shadow-2xl group cursor-pointer border border-primary/20">
+                            <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-1000">
+                                <img src="img/revpreaching.png.jpeg" alt="rev preaching" class="w-full h-full object-cover">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-14 h-14 sm:w-20 sm:h-20 bg-tertiary text-white rounded-full flex items-center justify-center shadow-2xl group-hover:bg-secondary transition-all group-hover:scale-110">
+                                    <span class="material-symbols-outlined text-3xl sm:text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -z-10 -top-6 sm:-top-10 -right-6 sm:-right-10 w-24 sm:w-40 h-24 sm:h-40 bg-secondary/10 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="py-12 sm:py-section-gap bg-primary text-white" id="events">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+                <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 sm:mb-16">
+                    <div>
+                        <span class="text-secondary font-label-md text-[10px] sm:text-label-md uppercase tracking-widest">Mark Your Calendars</span>
+                        <h2 class="font-headline-md text-[22px] sm:text-headline-md text-white mt-1 sm:mt-2">UPCOMING EVENTS</h2>
+                    </div>
+                    <a href="events.html"><button class="mt-3 sm:mt-0 text-secondary border-b border-secondary font-bold hover:text-secondary/80 transition-colors text-sm sm:text-base">VIEW FULL CALENDAR</button></a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-gutter">
+                    <!-- Event 1 -->
+                    <div class="bg-white text-on-surface p-6 sm:p-8 rounded-xl border border-primary/20 hover:border-secondary hover:shadow-[0_0_30px_rgba(255,140,0,0.2)] hover:-translate-y-2 transition-all duration-400 group cursor-pointer">
+                        <div class="text-secondary font-bold text-[20px] sm:text-headline-sm mb-3 sm:mb-4">DEC 03-14</div>
+                        <h3 class="font-headline-sm text-[16px] sm:text-lg mb-1 sm:mb-2 text-on-surface">Camp Meeting</h3>
+                        <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">A spiritual retreat for deepening our faith through intensive prayer and fellowship.</p>
+                        <a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-secondary transition-colors text-on-surface" href="#">Registration Open <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="bg-white text-on-surface p-6 sm:p-8 rounded-xl border border-primary/20 hover:border-secondary hover:shadow-[0_0_30px_rgba(255,140,0,0.2)] hover:-translate-y-2 transition-all duration-400 group cursor-pointer">
+                        <div class="text-secondary font-bold text-[20px] sm:text-headline-sm mb-3 sm:mb-4">JUL 07-12</div>
+                        <h3 class="font-headline-sm text-[16px] sm:text-lg mb-1 sm:mb-2 text-on-surface">Prayer Conference</h3>
+                        <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">Interceding for our families, our city, and our nation in a week of devoted prayer.</p>
+                        <a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-secondary transition-colors text-on-surface" href="#">Event Details <span class="material-symbols-outlined text-sm">info</span></a>
+                    </div>
+                    <!-- Event 3 -->
+                    <div class="bg-white text-on-surface p-6 sm:p-8 rounded-xl border border-primary/20 hover:border-secondary hover:shadow-[0_0_30px_rgba(255,140,0,0.2)] hover:-translate-y-2 transition-all duration-400 group cursor-pointer">
+                        <div class="text-secondary font-bold text-[20px] sm:text-headline-sm mb-3 sm:mb-4">AUG 23</div>
+                        <h3 class="font-headline-sm text-[16px] sm:text-lg mb-1 sm:mb-2 text-on-surface">Youth Rally</h3>
+                        <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">A high-energy day of worship, workshops, and community building for our youth.</p>
+                        <a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-secondary transition-colors text-on-surface" href="#">Join the Rally <span class="material-symbols-outlined text-sm">rocket_launch</span></a>
+                    </div>
+                    <!-- Event 4 -->
+                    <div class="bg-white text-on-surface p-6 sm:p-8 rounded-xl border border-primary/20 hover:border-secondary hover:shadow-[0_0_30px_rgba(255,140,0,0.2)] hover:-translate-y-2 transition-all duration-400 group cursor-pointer">
+                        <div class="text-secondary font-bold text-[20px] sm:text-headline-sm mb-3 sm:mb-4">DEC 25</div>
+                        <h3 class="font-headline-sm text-[16px] sm:text-lg mb-1 sm:mb-2 text-on-surface">Christmas Service</h3>
+                        <p class="text-on-surface-variant text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">Celebrating the birth of our Savior with a grand service of hymns and celebration.</p>
+                        <a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-secondary transition-colors text-on-surface" href="#">Invite Friends <span class="material-symbols-outlined text-sm">share</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Visit Section -->
+        <section class="py-12 sm:py-section-gap bg-surface" id="contact">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16">
+                    <div class="space-y-6 sm:space-y-stack-lg">
+                        <div>
+                            <span class="text-secondary font-label-md text-[10px] sm:text-label-md uppercase tracking-widest">Connect With Us</span>
+                            <h2 class="font-headline-md text-[22px] sm:text-headline-md text-primary mt-1 sm:mt-2">Find Your Way Home</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+                            <div class="space-y-3 sm:space-y-4">
+                                <div class="flex items-center gap-2 sm:gap-3">
+                                    <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+                                    <span class="font-bold text-primary text-sm sm:text-base">Location</span>
+                                </div>
+                                <p class="text-on-surface-variant text-sm sm:text-base">Juja Road, Opposite Ola Petrol Station<br/>Nairobi, Kenya</p>
+                            </div>
+                            <div class="space-y-3 sm:space-y-4">
+                                <div class="flex items-center gap-2 sm:gap-3">
+                                    <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">schedule</span>
+                                    <span class="font-bold text-primary text-sm sm:text-base">Service Times</span>
+                                </div>
+                                <p class="text-on-surface-variant text-sm sm:text-base">Sunday Worship: 9:00 AM - 1:00 PM<br/>Wednesday Fellowship: 5:00 PM - 7:00 PM</p>
+                            </div>
+                            <div class="space-y-3 sm:space-y-4">
+                                <div class="flex items-center gap-2 sm:gap-3">
+                                    <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">phone</span>
+                                    <span class="font-bold text-primary text-sm sm:text-base">Phone</span>
+                                </div>
+                                <p class="text-on-surface-variant text-sm sm:text-base">Contact Us</p>
+                                <p class="text-on-surface-variant text-sm sm:text-base">+254 700 000 000</p>
+                            </div>
+                            <div class="space-y-3 sm:space-y-4">
+                                <div class="flex items-center gap-2 sm:gap-3">
+                                    <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">mail</span>
+                                    <span class="font-bold text-primary text-sm sm:text-base">Email</span>
+                                </div>
+                                <p class="text-on-surface-variant text-sm sm:text-base">info@rckNairobi.org</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-8">
+                            <form class="space-y-3 sm:space-y-4 bg-surface-container p-6 sm:p-8 rounded-xl border border-primary/20">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                                    <input class="w-full bg-white border border-primary/20 rounded-lg p-2.5 sm:p-3 text-sm focus:ring-2 focus:ring-primary text-on-surface" placeholder="Full Name" type="text" />
+                                    <input class="w-full bg-white border border-primary/20 rounded-lg p-2.5 sm:p-3 text-sm focus:ring-2 focus:ring-primary text-on-surface" placeholder="Email Address" type="email" />
+                                </div>
+                                <textarea class="w-full bg-white border border-primary/20 rounded-lg p-2.5 sm:p-3 text-sm focus:ring-2 focus:ring-primary text-on-surface" placeholder="How may the servant of God be of assistance to you?" rows="3 sm:rows-4"></textarea>
+                                <button class="w-full py-3 sm:py-4 bg-tertiary text-white font-bold rounded-lg hover:bg-secondary transition-all uppercase tracking-widest text-xs sm:text-sm" type="submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-2xl relative h-[400px] sm:h-[500px] lg:h-[600px] border border-primary/20">
+                        <img class="w-full h-full object-cover" data-location="Nairobi" src="img/churchmap.png" />
+                        <div class="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-xl border border-primary/20 flex items-center justify-between shadow-lg">
+                            <div>
+                                <h4 class="font-bold text-primary text-sm sm:text-base">R.C.K Nairobi</h4>
+                                <p class="text-xs sm:text-sm text-on-surface-variant">Get Directions To Our Church</p>
+                            </div>
+                            <a href="https://www.google.com/maps/place/Revival+Churches+Of+Kenya/@-1.2656612,36.8487969,17z/data=!3m1!4b1!4m6!3m5!1s0x182f16be87e1b1f9:0xc64223a31b5edd65!8m2!3d-1.2656612!4d36.8513718!16s%2Fg%2F11g2q68xjw?entry=ttu&g_ep=EgoyMDI2MDcyMC4wIKXMDSoASAFQAw%3D%3D"><button class="w-10 h-10 sm:w-12 sm:h-12 bg-tertiary text-white rounded-full flex items-center justify-center hover:bg-secondary transition-all">
+                                <span class="material-symbols-outlined">directions</span>
+                            </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="bg-surface-dark py-10 sm:py-section-gap" style="background-color: #121212;">
+        <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-stack-lg">
+                <!-- Brand Column -->
+                <div class="space-y-3 sm:space-y-4">
+                    <div class="font-headline-sm text-[18px] sm:text-headline-sm text-secondary">R.C.K Nairobi</div>
+                    <p class="text-white/60 font-body-md text-sm sm:text-base pr-4">A branch of the Revival Churches of Kenya, dedicated to spreading the light of the Gospel and fostering a vibrant community of faith in Nairobi.</p>
+                    <div class="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="font-bold text-white uppercase tracking-widest text-xs sm:text-sm border-l-2 border-secondary pl-2 sm:pl-3">Quick Links</h4>
+                    <ul class="space-y-1.5 sm:space-y-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Location</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Service Times</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Contact Us</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Privacy Policy</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Give</a></li>
+                    </ul>
+                </div>
+                <!-- Support Column -->
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="font-bold text-white uppercase tracking-widest text-xs sm:text-sm border-l-2 border-secondary pl-2 sm:pl-3">Our Ministries</h4>
+                    <ul class="space-y-1.5 sm:space-y-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Youth Ministry</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Women's Fellowship</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">RCK Choir</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Sunday School</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info Column -->
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="font-bold text-white uppercase tracking-widest text-xs sm:text-sm border-l-2 border-secondary pl-2 sm:pl-3">Newsletter</h4>
+                    <p class="text-white/60 text-sm">Stay updated with our weekly spiritual letters and events.</p>
+                    <div class="flex">
+                        <input class="bg-white/10 text-white border border-secondary/30 rounded-l-lg w-full p-2.5 sm:p-3 text-sm focus:ring-1 focus:ring-secondary placeholder-white/40" placeholder="Email Address" type="email" />
+                        <button class="bg-tertiary text-white font-bold px-3 sm:px-4 rounded-r-lg hover:bg-secondary transition-all">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 sm:mt-section-gap pt-6 sm:pt-8 border-t border-secondary/30 flex flex-col md:flex-row items-center justify-between text-white/60 text-xs sm:text-sm gap-3 sm:gap-0">
+                <p>© 2026 R.C.K NAIROBI CHURCH. All Rights Reserved.</p>
+                <div class="flex gap-4 sm:gap-8 mt-2 sm:mt-0">
+                    <a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-secondary transition-colors" href="#">Member Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function openMobileMenu() {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.getElementById('menuOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Scroll header shadow
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | R.C.K Nairobi Church</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#002366",
+                        "primary-container": "#e8edf5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002366",
+                        "on-primary-fixed-variant": "#3f446d",
+                        "primary-fixed": "#dfe0ff",
+                        "primary-fixed-dim": "#bfc3f4",
+                        "inverse-primary": "#bfc3f4",
+                        "secondary": "#FF8C00",
+                        "secondary-container": "#FFF0D0",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#4a2d00",
+                        "on-secondary-fixed-variant": "#8a5a00",
+                        "secondary-fixed": "#FFD699",
+                        "secondary-fixed-dim": "#F5B84C",
+                        "tertiary": "#B22222",
+                        "tertiary-container": "#F5D0D0",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#4a0d0d",
+                        "on-tertiary-fixed-variant": "#7a1a1a",
+                        "tertiary-fixed": "#FFB3B3",
+                        "tertiary-fixed-dim": "#E68080",
+                        "surface": "#ffffff",
+                        "surface-container": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface": "#1a1a1a",
+                        "on-surface-variant": "#46464e",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#ffffff",
+                        "on-background": "#1a1a1a",
+                        "outline": "#77767f",
+                        "outline-variant": "#c7c5cf",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#002366",
+                        "on-primary-container": "#000000",
+                        "on-secondary-container": "#000000",
+                        "on-tertiary-container": "#ffffff",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["\"Source Serif 4\""],
+                        "display-lg-mobile": ["\"Source Serif 4\""],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {
+                            "lineHeight": "56px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "display-lg-mobile": ["36px", {
+                            "lineHeight": "44px",
+                            "fontWeight": "700"
+                        }],
+                        "label-md": ["14px", {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "28px",
+                            "fontWeight": "400"
+                        }],
+                        "headline-sm": ["24px", {
+                            "lineHeight": "32px",
+                            "fontWeight": "600"
+                        }],
+                        "headline-md": ["32px", {
+                            "lineHeight": "40px",
+                            "fontWeight": "600"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }]
+                    },
+                    "animation": {
+                        "scroll-up": "scroll-up 25s linear infinite",
+                        "scroll-down": "scroll-down 25s linear infinite"
+                    },
+                    "keyframes": {
+                        "scroll-up": {
+                            "0%": {
+                                transform: "translateY(0)"
+                            },
+                            "100%": {
+                                transform: "translateY(-50%)"
+                            }
+                        },
+                        "scroll-down": {
+                            "0%": {
+                                transform: "translateY(-50%)"
+                            },
+                            "100%": {
+                                transform: "translateY(0)"
+                            }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 35, 102, 0.5), rgba(0, 35, 102, 0.7));
+        }
+        
+        .scrolling-header {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        @keyframes legacyCrossFade {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            33% { opacity: 1; }
+            43% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        
+        .legacy-slideshow-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: legacyCrossFade 12s infinite ease-in-out;
+        }
+        .legacy-slideshow-img:nth-child(1) { animation-delay: 0s; }
+        .legacy-slideshow-img:nth-child(2) { animation-delay: 4s; }
+        .legacy-slideshow-img:nth-child(3) { animation-delay: 8s; }
+
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-panel.open {
+            left: 0;
+        }
+        
+        .logo-circle {
+            border-radius: 9999px !important;
+            overflow: hidden !important;
+        }
+        .logo-circle img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary selection:text-white overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-headline-md text-headline-md font-bold text-primary">R.C.K NAIROBI</span>
+            <button onclick="closeMobileMenu()" class="text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-2" href="about.html">About Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="ministries.html">Ministries</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="sermons.html">Sermons</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="events.html">Events</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="contact.html">Contact</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="gallery.html">Gallery</a>
+            <a class="mt-4 inline-block px-6 py-3 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-center" href="#give">GIVE</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-primary/10">
+            <div class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary">location_on</span>
+                <span class="text-sm">NAIROBI, KENYA</span>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utility Top Bar -->
+    <div class="bg-primary text-white py-1.5 sm:py-2 px-3 sm:px-gutter relative z-[60]">
+        <div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center text-[10px] sm:text-[12px] font-label-md tracking-wider gap-1 sm:gap-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] text-secondary">location_on</span>
+                    <span class="hidden xs:inline">NAIROBI, KENYA</span>
+                    <span class="inline xs:hidden">NAIROBI</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3 md:gap-4 border-l border-white/20 pl-3 md:pl-4">
+                    <a class="hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                    <a class="hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            <a class="flex items-center gap-1 sm:gap-2 bg-tertiary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white font-bold hover:bg-secondary transition-all hover:scale-105 text-[9px] sm:text-[12px]" href="#">
+                <span class="material-symbols-outlined text-[12px] sm:text-[16px]">live_tv</span> 
+                <span class="hidden xs:inline">WATCH LIVE</span>
+                <span class="inline xs:hidden">LIVE</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="fixed top-[36px] sm:top-[40px] left-0 w-full z-50 glass-nav border-b border-primary/20 h-16 sm:h-20">
+        <nav class="max-w-container-max mx-auto px-3 sm:px-gutter py-2 sm:py-4 flex justify-between items-center h-full">
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1" onclick="openMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Nav Links Left -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-end pr-4 lg:pr-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="index.html">HOME</a>
+                <a class="border-b-2 border-secondary font-bold text-secondary text-sm lg:text-base" href="about.html">ABOUT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="ministries.html">MINISTRIES</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="sermons.html">SERMONS</a>
+            </div>
+            <!-- Brand Identity - Central Overlapping Logo Container -->
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] bg-white rounded-full border-4 border-secondary shadow-lg flex flex-col items-center justify-center overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 -mb-4 sm:-mb-6 md:-mb-8 logo-circle">
+                    <div class="w-full h-full bg-surface-container flex items-center justify-center group cursor-pointer overflow-hidden logo-circle">
+                        <img src="img/churchlogo.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="#">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full md:hidden">
+                    <span class="text-[8px] sm:text-[10px] font-label-md tracking-[0.3em] text-secondary uppercase">NAIROBI</span>
+                </div>
+            </div>
+            <!-- Nav Links Right -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-start pl-4 lg:pl-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="events.html">EVENTS</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="contact.html">CONTACT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="gallery.html">GALLERY</a>
+                <a class="inline-block px-4 lg:px-6 py-1.5 lg:py-2 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-xs lg:text-sm" href="#give">GIVE</a>
+            </div>
+            <!-- Mobile Action -->
+            <div class="md:hidden flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">volunteer_activism</span>
+                <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[70px] sm:pt-[80px] md:pt-[100px]">
+        <!-- Hero Section -->
+        <section class="relative h-[400px] sm:h-[500px] md:h-[614px] lg:h-[716px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-primary/40 z-10"></div>
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center">
+                <img src="img/churchlogo.png" alt="R.C.K NAIROBI" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-20 text-center px-4 sm:px-gutter max-w-4xl">
+                <span class="font-label-md text-[10px] sm:text-label-md text-secondary uppercase tracking-[0.2em] block mb-2 sm:mb-4">Who We Are</span>
+                <h1 class="font-display-lg text-[28px] sm:text-[36px] md:text-display-lg lg:text-7xl text-white drop-shadow-lg uppercase tracking-tight">About Us</h1>
+                <div class="w-16 sm:w-24 h-1 bg-secondary mx-auto mt-4 sm:mt-8"></div>
+            </div>
+        </section>
+
+        <!-- Story Content -->
+        <section class="py-10 sm:py-section-gap px-3 sm:px-gutter max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-stack-lg items-center">
+                <div class="lg:col-span-7 space-y-4 sm:space-y-stack-md">
+                    <h2 class="font-headline-md text-[22px] sm:text-headline-md text-primary mb-4 sm:mb-6">A Vibrant Community</h2>
+                    <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant leading-relaxed">
+                        R.C.K Nairobi Church is a vibrant and welcoming community of believers dedicated to worship, fellowship, and serving others. Our church serves as a sanctuary where people from all walks of life can come together to grow in their faith, find support in
+                        times of need, and celebrate the transformative power of God's love.
+                    </p>
+                    <div class="bg-surface-container-low border-l-4 border-secondary p-4 sm:p-8 my-4 sm:my-8 italic">
+                        <p class="font-display-lg text-[16px] sm:text-headline-sm text-primary italic">
+                            "The story of R.C.K Nairobi Church is one of humble beginnings and extraordinary faithfulness."
+                        </p>
+                    </div>
+                    <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant leading-relaxed">
+                        It all started in 1990, in the intimate setting of a living room, where Rev. Patrick Mrabu and a small, dedicated group of faithful individuals gathered with a shared vision of creating a space for spiritual growth and community impact. What began as
+                        a small gathering fueled by prayer and a passion for the Gospel has since blossomed into a thriving congregation. Over the years, we have grown and evolved, eventually becoming a proud branch of R.C.K Nairobi.
+                    </p>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-xl border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="A portrait of a visionary leader, Rev. Patrick Mrabu, standing outside a modern church building at sunset. He is dressed in professional pastoral attire, wearing a warm and welcoming expression. The golden hour light casts long shadows and highlights his face with a soft glow, symbolizing leadership, wisdom, and the humble beginnings of the church. The background shows the blurred outlines of a community gathering space."
+                            src="img/revinattire.png.jpeg" />
+                    </div>
+                    <div class="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 bg-secondary text-white px-4 sm:px-8 py-3 sm:py-6 rounded-lg shadow-lg hidden md:block">
+                        <p class="font-label-md text-[10px] sm:text-label-md uppercase tracking-wider opacity-80">Established</p>
+                        <p class="font-headline-sm text-[18px] sm:text-headline-sm font-bold">1998</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section (Bento Grid) -->
+        <section class="bg-primary py-10 sm:py-section-gap text-on-primary">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+                <div class="text-center mb-8 sm:mb-16">
+                    <h2 class="font-display-lg text-[24px] sm:text-display-lg text-secondary mb-2 sm:mb-4">Our Vision &amp; Purpose</h2>
+                    <p class="text-white/80 max-w-2xl mx-auto font-body-lg text-sm sm:text-base">Building a legacy of faith through intentionality and divine authority.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
+                    <!-- Vision Card 1 -->
+                    <div class="bg-primary-container p-6 sm:p-10 rounded-xl border border-white/20 hover:border-secondary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">diversity_3</span>
+                        <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-primary mb-3 sm:mb-4">Intentional Discipleship</h3>
+                        <p class="text-on-surface font-body-md text-sm sm:text-base">We are committed to nurturing deep, authentic relationships with Christ through structured biblical teaching and mentorship programs.</p>
+                    </div>
+                    <!-- Vision Card 2 -->
+                    <div class="bg-primary-container p-6 sm:p-10 rounded-xl border border-white/20 hover:border-secondary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">shield</span>
+                        <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-primary mb-3 sm:mb-4">Kingdom Champions</h3>
+                        <p class="text-on-surface font-body-md text-sm sm:text-base">"Equipping this generation with faith, purpose, and character to stand bold for Christ—raising Kingdom champions who transform the world around them."</p>
+                    </div>
+                    <!-- Vision Card 3 -->
+                    <div class="bg-primary-container p-6 sm:p-10 rounded-xl border border-white/20 hover:border-secondary transition-colors duration-300">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">account_balance</span>
+                        <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-primary mb-3 sm:mb-4">Divine Legacy</h3>
+                        <p class="text-on-surface font-body-md text-sm sm:text-base">Maintaining our connection to R.C.K Nairobi while fostering a unique local identity that honors our history and looks toward a bright future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founding Journey Section with Animated Carousel -->
+        <section class="py-10 sm:py-section-gap overflow-hidden bg-surface">
+            <div class="max-w-container-max mx-auto px-3 sm:px-gutter grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-stack-lg items-center">
+                <div class="order-2 lg:order-1 h-[400px] sm:h-[500px] lg:h-[600px] carousel-container relative overflow-hidden">
+                    <div class="grid grid-cols-2 gap-3 sm:gap-4 h-full">
+                        <!-- Left Column: Animates Up -->
+                        <div class="flex flex-col gap-3 sm:gap-4 animate-scroll-up">
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" data-alt="Founding story home meeting 1998" src="img/revspeaking.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" data-alt="Church building construction" src="img/WhatsApp Image 2026-06-07 at 1.58.45 AM (3).jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" data-alt="Modern church exterior" src="img/revnewchurch.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revspeaking.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revnyouth.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/WhatsApp Image 2026-06-07 at 1.58.45 AM (2).jpeg">
+                            </div>
+                        </div>
+                        <!-- Right Column: Animates Down -->
+                        <div class="flex flex-col gap-3 sm:gap-4 animate-scroll-down">
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revpreaching.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revinwhite.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revraisinghand.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revpreaching.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revinwhite.png.jpeg">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] border border-primary/20">
+                                <img class="w-full h-full object-cover" src="img/revraisinghand.png.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 space-y-4 sm:space-y-stack-md lg:pl-12">
+                    <h2 class="font-display-lg text-[24px] sm:text-display-lg text-primary">The Founding Journey</h2>
+                    <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant">
+                        Rev. Patrick Mrabu's vision wasn't just about a building; it was about building people. From that first living room meeting to our current facility, every step has been marked by faith.
+                    </p>
+                    <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">
+                        As a branch of R.C.K Nairobi, we carry forward a heritage of excellence and spiritual depth, serving the Mathare community with unwavering commitment.
+                    </p>
+                    <div class="pt-2 sm:pt-4">
+                        <button class="border-2 border-primary text-primary px-6 sm:px-10 py-2.5 sm:py-4 rounded-full font-label-md text-xs sm:text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all duration-300">
+                            Read Full History
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thank You / CTA Section -->
+        <section class="relative bg-inverse-surface py-12 sm:py-24 overflow-hidden">
+            <div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-gutter">
+                <h2 class="font-display-lg text-[24px] sm:text-display-lg text-white mb-4 sm:mb-6">Thank You for Being Part of Our Story</h2>
+                <p class="text-white/80 text-sm sm:text-body-lg mb-8 sm:mb-12 max-w-2xl mx-auto">
+                    Whether you are a long-time member or visiting for the first time, we invite you to experience the warmth and spirit of R.C.K Nairobi Church.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                    <a class="bg-tertiary text-white px-8 sm:px-12 py-3 sm:py-5 rounded-full font-label-md text-sm sm:text-base uppercase tracking-[0.2em] hover:bg-secondary transition-all duration-300 shadow-xl" href="#">
+                        Visit Us
+                    </a>
+                    <a class="text-white border-b border-white/30 py-2 font-label-md text-sm sm:text-base uppercase tracking-widest hover:border-secondary transition-colors" href="#">
+                        Plan Your Visit
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-dark py-10 sm:py-section-gap border-t border-secondary/30" style="background-color: #121212;">
+        <div class="max-w-container-max mx-auto px-3 sm:px-gutter">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-stack-lg">
+                <!-- Brand Column -->
+                <div class="space-y-3 sm:space-y-4">
+                    <div class="font-headline-sm text-[18px] sm:text-headline-sm text-secondary">R.C.K Nairobi</div>
+                    <p class="text-white/60 font-body-md text-sm sm:text-base pr-4">A branch of the Revival Churches of Kenya, dedicated to spreading the light of the Gospel and fostering a vibrant community of faith in Nairobi.</p>
+                    <div class="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+                    </div>
+                </div>
+                <!-- Navigation Links -->
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="font-bold text-white uppercase tracking-widest text-xs sm:text-sm border-l-2 border-secondary pl-2 sm:pl-3">Quick Links</h4>
+                    <ul class="space-y-1.5 sm:space-y-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Location</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Service Times</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Contact Us</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Privacy Policy</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Give</a></li>
+                    </ul>
+                </div>
+                <!-- Support Column -->
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="font-bold text-white uppercase tracking-widest text-xs sm:text-sm border-l-2 border-secondary pl-2 sm:pl-3">Our Ministries</h4>
+                    <ul class="space-y-1.5 sm:space-y-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Youth Ministry</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Women's Fellowship</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">RCK Choir</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Sunday School</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info Column -->
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="font-bold text-white uppercase tracking-widest text-xs sm:text-sm border-l-2 border-secondary pl-2 sm:pl-3">Newsletter</h4>
+                    <p class="text-white/60 text-sm">Stay updated with our weekly spiritual letters and events.</p>
+                    <div class="flex">
+                        <input class="bg-white/10 text-white border border-secondary/30 rounded-l-lg w-full p-2.5 sm:p-3 text-sm focus:ring-1 focus:ring-secondary placeholder-white/40" placeholder="Email Address" type="email" />
+                        <button class="bg-tertiary text-white font-bold px-3 sm:px-4 rounded-r-lg hover:bg-secondary transition-all">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 sm:mt-section-gap pt-6 sm:pt-8 border-t border-secondary/30 flex flex-col md:flex-row items-center justify-between text-white/60 text-xs sm:text-sm gap-3 sm:gap-0">
+                <p>© 2026 R.C.K NAIROBI CHURCH. All Rights Reserved.</p>
+                <div class="flex gap-4 sm:gap-8 mt-2 sm:mt-0">
+                    <a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-secondary transition-colors" href="#">Member Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function openMobileMenu() {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.getElementById('menuOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolling-header');
+            } else {
+                header.classList.remove('scrolling-header');
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+
+        // Intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

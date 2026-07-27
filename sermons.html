@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sermons | Grace Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .pulse-gold {
+            box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 140, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 140, 0, 0); }
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .scrolling-header {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        .logo-circle {
+            border-radius: 9999px !important;
+            overflow: hidden !important;
+        }
+        
+        .logo-circle img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-panel.open {
+            left: 0;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        // Royal Blue - primary
+                        "primary": "#002366",
+                        "primary-container": "#e8edf5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002366",
+                        "on-primary-fixed-variant": "#3f446d",
+                        "primary-fixed": "#dfe0ff",
+                        "primary-fixed-dim": "#bfc3f4",
+                        "inverse-primary": "#bfc3f4",
+                        
+                        // Golden Orange - secondary
+                        "secondary": "#FF8C00",
+                        "secondary-container": "#FFF0D0",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#4a2d00",
+                        "on-secondary-fixed-variant": "#8a5a00",
+                        "secondary-fixed": "#FFD699",
+                        "secondary-fixed-dim": "#F5B84C",
+                        
+                        // Revival Red - tertiary
+                        "tertiary": "#B22222",
+                        "tertiary-container": "#F5D0D0",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#4a0d0d",
+                        "on-tertiary-fixed-variant": "#7a1a1a",
+                        "tertiary-fixed": "#FFB3B3",
+                        "tertiary-fixed-dim": "#E68080",
+                        
+                        // White base
+                        "surface": "#ffffff",
+                        "surface-container": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface": "#1a1a1a",
+                        "on-surface-variant": "#46464e",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        
+                        // Background - white
+                        "background": "#ffffff",
+                        "on-background": "#1a1a1a",
+                        
+                        // Other colors
+                        "outline": "#77767f",
+                        "outline-variant": "#c7c5cf",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#002366",
+                        
+                        // White text for titles on dark backgrounds
+                        "on-primary-container": "#000000",
+                        "on-secondary-container": "#000000",
+                        "on-tertiary-container": "#ffffff",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "stack-xl": "64px",
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["\"Source Serif 4\""],
+                        "display-lg-mobile": ["\"Source Serif 4\""],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-headline-md text-headline-md font-bold text-primary">R.C.K NAIROBI</span>
+            <button onclick="closeMobileMenu()" class="text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="about.html">About Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="ministries.html">Ministries</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-2" href="sermons.html">Sermons</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="events.html">Events</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="contact.html">Contact</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="gallery.html">Gallery</a>
+            <a class="mt-4 inline-block px-6 py-3 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-center" href="#give">GIVE</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-primary/10">
+            <div class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary">location_on</span>
+                <span class="text-sm">NAIROBI, KENYA</span>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utility Top Bar -->
+    <div class="bg-primary text-white py-1.5 sm:py-2 px-3 sm:px-gutter relative z-[60]">
+        <div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center text-[10px] sm:text-[12px] font-label-md tracking-wider gap-1 sm:gap-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] text-secondary">location_on</span>
+                    <span class="hidden xs:inline">NAIROBI, KENYA</span>
+                    <span class="inline xs:hidden">NAIROBI</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3 md:gap-4 border-l border-white/20 pl-3 md:pl-4">
+                    <a class="hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                    <a class="hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            <a class="flex items-center gap-1 sm:gap-2 bg-tertiary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white font-bold hover:bg-secondary transition-all hover:scale-105 text-[9px] sm:text-[12px]" href="#">
+                <span class="material-symbols-outlined text-[12px] sm:text-[16px]">live_tv</span> 
+                <span class="hidden xs:inline">WATCH LIVE</span>
+                <span class="inline xs:hidden">LIVE</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="fixed top-[36px] sm:top-[40px] left-0 w-full z-50 glass-nav border-b border-primary/20 h-16 sm:h-20">
+        <nav class="max-w-container-max mx-auto px-3 sm:px-gutter py-2 sm:py-4 flex justify-between items-center h-full">
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1" onclick="openMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Nav Links Left -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-end pr-4 lg:pr-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="index.html">HOME</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="about.html">ABOUT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="ministries.html">MINISTRIES</a>
+                <a class="border-b-2 border-secondary font-bold text-secondary text-sm lg:text-base" href="sermons.html">SERMONS</a>
+            </div>
+            <!-- Brand Identity - Central Overlapping Circular Logo Container -->
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] bg-white rounded-full border-4 border-secondary shadow-lg flex flex-col items-center justify-center overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 -mb-4 sm:-mb-6 md:-mb-8 logo-circle">
+                    <div class="w-full h-full bg-surface-container flex items-center justify-center group cursor-pointer overflow-hidden logo-circle">
+                        <img src="img/churchlogo.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="#">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full md:hidden">
+                    <span class="text-[8px] sm:text-[10px] font-label-md tracking-[0.3em] text-secondary uppercase">NAIROBI</span>
+                </div>
+            </div>
+            <!-- Nav Links Right -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-start pl-4 lg:pl-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="events.html">EVENTS</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="contact.html">CONTACT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="gallery.html">GALLERY</a>
+                <a class="inline-block px-4 lg:px-6 py-1.5 lg:py-2 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-xs lg:text-sm" href="#give">GIVE</a>
+            </div>
+            <!-- Mobile Action -->
+            <div class="md:hidden flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">volunteer_activism</span>
+                <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="pt-[70px] sm:pt-[80px] md:pt-[140px]">
+        <!-- Hero Section: Watch Live -->
+        <section class="relative w-full h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden bg-primary">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center opacity-40 mix-blend-overlay" data-alt="A cinematic, high-angle interior shot of a modern architectural sanctuary with soaring wood-paneled ceilings and soft light streaming through narrow windows. The atmosphere is serene and sacred, featuring a minimalist stage set with warm ambient lighting. Deep navy shadows and golden highlights create a sophisticated and spiritual mood for Grace Sanctuary." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXAJXOmi4fdwd6JF1kqGoK420dwIDzHXkd5wbIJ1LZPBPiPBGijSrrynbgYn4hy8D8m3Mv13C1oNYCNz3tiONbGrgAOL7Xv57Kw67kllJTA-vGvSnOrh6JRP6NKBovXFShGhhbSJXTIylVyWx3JoYIxARtQ4xin_GjHS5Za0simX-lODf0RIT5yISKK7IP91Z4YCP2ps0CdjtHTLTNSeUrlnz_xye2ELhQYa8VBghMczEc4bCYcMtq')"></div>
+            </div>
+            <div class="relative z-10 h-full max-w-container-max mx-auto px-4 sm:px-margin-desktop flex flex-col justify-center items-start">
+                <div class="inline-flex items-center gap-2 sm:gap-stack-sm bg-white/10 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4 sm:mb-stack-lg border border-white/20">
+                    <span class="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-secondary rounded-full pulse-gold"></span>
+                    <span class="font-label-md text-[10px] sm:text-label-md text-white uppercase tracking-widest">Live Now</span>
+                </div>
+                <h1 class="font-headline-xl text-[28px] sm:text-[36px] md:text-headline-xl text-white mb-3 sm:mb-stack-md max-w-2xl">The Architecture of Hope: Part IV</h1>
+                <p class="font-body-lg text-sm sm:text-body-lg text-white/80 mb-4 sm:mb-stack-lg max-w-xl">Join us for this morning's service as Pastor Elias Thorne explores the profound connections between faith and resilience in a changing world.</p>
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-stack-md w-full sm:w-auto">
+                    <button class="group flex items-center justify-center gap-2 sm:gap-stack-md bg-white text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-label-md text-sm sm:text-base hover:bg-secondary hover:text-white transition-all duration-300">
+                        <span class="material-symbols-outlined text-2xl sm:text-3xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                        WATCH LIVE STREAM
+                    </button>
+                    <button class="flex items-center justify-center gap-2 sm:gap-stack-md border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-label-md text-sm sm:text-base hover:bg-white/10 transition-all duration-300">
+                        SERIES ARCHIVE
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Sermons: High-Fidelity Carousel -->
+        <section class="py-8 sm:py-stack-xl px-4 sm:px-margin-desktop max-w-container-max mx-auto">
+            <div class="flex flex-wrap justify-between items-end gap-4 mb-4 sm:mb-stack-lg">
+                <div>
+                    <h2 class="font-headline-lg text-[22px] sm:text-headline-lg text-primary">Latest Message Series</h2>
+                    <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">Explore our most recent seasonal teachings and deep-dives.</p>
+                </div>
+                <div class="flex gap-2 sm:gap-stack-sm">
+                    <button class="p-2 border border-primary/20 rounded-lg hover:bg-surface-container transition-colors text-primary">
+                        <span class="material-symbols-outlined text-[20px] sm:text-[24px]">chevron_left</span>
+                    </button>
+                    <button class="p-2 border border-primary/20 rounded-lg hover:bg-surface-container transition-colors text-primary">
+                        <span class="material-symbols-outlined text-[20px] sm:text-[24px]">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex gap-3 sm:gap-gutter overflow-x-auto pb-4 sm:pb-stack-md hide-scrollbar">
+                <!-- Carousel Card 1 -->
+                <div class="flex-none w-[280px] sm:w-[350px] md:w-[400px] group cursor-pointer">
+                    <div class="relative aspect-video rounded-xl overflow-hidden mb-2 sm:mb-stack-sm border border-primary/20 shadow-sm group-hover:scale-[1.02] transition-transform duration-300">
+                        <div class="absolute inset-0 bg-cover bg-center" data-alt="A minimalist graphic design for a sermon series titled 'Eternal Rhythms'. The image features abstract, flowing shapes in shades of deep navy and charcoal gray, with a subtle golden glow reflecting off curved surfaces. The aesthetic is clean and modern, evoking a sense of peaceful continuity and sacred time." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClfwx_tKAVgf9YpVwWeamxvREghb00DSVbXRf01KsZtA5Opq7MIHhR6uq9k7Iw8cyzqf9NJ8KbF2CfB4cg0j0L4_PbZzGFH0mcDEfKLkr7EYAqtNB-naxoNT_fyQZAUdyanhcsiOyM7DBhidn4rhwbVM2sI_pYzocxF_R6SLGwPLduKPHys7HpAGn992SIF-vqWWB2QHa6DOdEr0G0hgI1wNXJHEDyvTS4_1zhWkhrAoYhYbPszZdw')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl sm:text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                    <span class="font-label-sm text-[10px] sm:text-label-sm text-secondary uppercase tracking-widest">Message Series</span>
+                    <h3 class="font-headline-md text-[16px] sm:text-headline-md text-on-surface mt-1 group-hover:text-primary transition-colors">Eternal Rhythms</h3>
+                    <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant line-clamp-2 mt-1">Finding peace in the cadence of the creator's design for our daily lives.</p>
+                </div>
+                <!-- Carousel Card 2 -->
+                <div class="flex-none w-[280px] sm:w-[350px] md:w-[400px] group cursor-pointer">
+                    <div class="relative aspect-video rounded-xl overflow-hidden mb-2 sm:mb-stack-sm border border-primary/20 shadow-sm group-hover:scale-[1.02] transition-transform duration-300">
+                        <div class="absolute inset-0 bg-cover bg-center" data-alt="An evocative photograph of a mountain range at dawn, where the peak is touched by the first light of the sun, creating a brilliant gold edge against the deep blue morning sky. The visual style is crisp and editorial, representing the theme of 'Elevated Perspective'." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRxyJgkZEY4NgDwQm4q9g499FkUKC7zoXRX-lM9GdW9RGcG3q-YsCLiBzqTKyRYPpP1jWXLjEO0cQS7w3jQHre5p5fCIBucbemUAzZlr0vs30ZhoMIeDB1BYGctSLzbhtuuKceVf45gqNNIRrebkgOLaG3g3XrNzNMypqWTXZ0oDQDQ7LSWwileonC0tOH9Xc_UcB8YiPBKw2UQyGHWDVrcPTA2IGtYaNXS8kOCi5LNrCg1nPcaPvP')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl sm:text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                    <span class="font-label-sm text-[10px] sm:text-label-sm text-secondary uppercase tracking-widest">Special Event</span>
+                    <h3 class="font-headline-md text-[16px] sm:text-headline-md text-on-surface mt-1 group-hover:text-primary transition-colors">Elevated Perspective</h3>
+                    <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant line-clamp-2 mt-1">A collection of messages from our Annual Global Summit on visionary leadership.</p>
+                </div>
+                <!-- Carousel Card 3 -->
+                <div class="flex-none w-[280px] sm:w-[350px] md:w-[400px] group cursor-pointer">
+                    <div class="relative aspect-video rounded-xl overflow-hidden mb-2 sm:mb-stack-sm border border-primary/20 shadow-sm group-hover:scale-[1.02] transition-transform duration-300">
+                        <div class="absolute inset-0 bg-cover bg-center" data-alt="A high-contrast macro shot of ripples on clear dark water, reflecting a soft golden light. The texture is intricate and calming, perfectly capturing the theme of 'Submerged Grace'. The lighting is low-key with a sophisticated, professional photographic quality." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnilcsDSIarw3tl0JyQCPjKIXFU-NWp1CmrNnb7-_-HL-dLnosd8hBTOSdRY0JuGoLgcHyGr5FpkMuAVREAQyFO4dzpmKLoTJAxtCh7qWuiP951zCpzS6N3ZhjlJGD424EOOO6TsGo6BahmCAfitUcUW8jX4Xm5_2wae8RZopZS2tjMVNa_ehPtzGB_Xrw9qZfbdb2DT8fCokJxqVZ-aT4mSUd9GteZlxQvAYQN2RrGgZKeBD90OcR')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-4xl sm:text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        </div>
+                    </div>
+                    <span class="font-label-sm text-[10px] sm:text-label-sm text-secondary uppercase tracking-widest">Theology Focus</span>
+                    <h3 class="font-headline-md text-[16px] sm:text-headline-md text-on-surface mt-1 group-hover:text-primary transition-colors">Submerged Grace</h3>
+                    <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant line-clamp-2 mt-1">Deep dives into the foundational truths that sustain us beneath the surface.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sermon Archive: Clean Grid -->
+        <section class="bg-surface-container-low py-8 sm:py-stack-xl">
+            <div class="px-4 sm:px-margin-desktop max-w-container-max mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-4 sm:mb-stack-lg gap-3 sm:gap-stack-md">
+                    <h2 class="font-headline-lg text-[22px] sm:text-headline-lg text-primary">Sermon Archive</h2>
+                    <div class="flex flex-wrap items-center gap-2 sm:gap-stack-sm bg-white p-1 rounded-lg border border-primary/20">
+                        <button class="px-3 sm:px-4 py-1.5 sm:py-2 bg-tertiary text-white rounded-lg font-label-md text-[10px] sm:text-label-sm hover:bg-secondary transition-all">All Sermons</button>
+                        <button class="px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-surface-container rounded-lg font-label-md text-[10px] sm:text-label-sm text-on-surface-variant">Topic</button>
+                        <button class="px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-surface-container rounded-lg font-label-md text-[10px] sm:text-label-sm text-on-surface-variant">Speaker</button>
+                        <button class="px-3 sm:px-4 py-1.5 sm:py-2 hover:bg-surface-container rounded-lg font-label-md text-[10px] sm:text-label-sm text-on-surface-variant">Year</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-gutter">
+                    <!-- Archive Card 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden border border-primary/20 group">
+                        <div class="relative aspect-[16/9]">
+                            <img class="w-full h-full object-cover" data-alt="A portrait of a thoughtful speaker standing on a modern stage with a dark blue backdrop. Soft cinematic rim lighting outlines their silhouette, creating a professional and reverent atmosphere. The speaker has a warm, engaging expression, conveying clarity and wisdom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcfYbcWObTwHLuu0ych5EScPrY0ixFH74CG5NK4lPq4bN8s2oDsDQN6JwrxbaCPrOPrpbMesBU6_VNAF2ULeupK1l5--hOcH_SDvn0T12zbKZIdVVIp_W_xhz9p0A7GuC1UULXVPsowHUPabLtocjlEeoyrIgxY98aypJO4tVQXf0CX6m3FoduGrFObPVu-W8IIAN4Tq3XUwJVjjMR2qTClx2R8bx5abDjQFi_MQ8jQIc5AuUh3Gmn"/>
+                            <div class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-white/90 backdrop-blur px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-label-sm text-[8px] sm:text-[10px] tracking-widest text-primary font-bold">42:15</div>
+                        </div>
+                        <div class="p-3 sm:p-stack-md">
+                            <div class="flex flex-wrap justify-between items-start gap-1 sm:gap-2 mb-1 sm:mb-2">
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-on-tertiary-container">Oct 27, 2024</span>
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-secondary">Elias Thorne</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-on-surface mb-1 sm:mb-stack-sm">The Stillness of Faith</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant mb-3 sm:mb-stack-md line-clamp-2">Understanding the power of silence and meditation in a world that never stops moving.</p>
+                            <button class="w-full flex items-center justify-center gap-2 border border-tertiary text-tertiary py-2 sm:py-3 rounded-lg font-label-md text-sm sm:text-base hover:bg-tertiary hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined text-lg">play_circle</span>
+                                WATCH ON YOUTUBE
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Archive Card 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden border border-primary/20 group">
+                        <div class="relative aspect-[16/9]">
+                            <img class="w-full h-full object-cover" data-alt="A beautiful wide shot of a modern sanctuary interior during a sunset service. Warm golden light fills the room, casting long shadows across the rows of minimalist wooden seating. The focus is on the peaceful architecture and the sacred atmosphere of Grace Sanctuary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL3M3aoivRSivHaVBWzw4a7Tv0tYhSzbLvqfet4NjAUs7PZ541uySqNIq5YP6NfWcZTZMA_07mV8K27JOZ_zGUFsnyweZJiL2KnGWsvGXC7VUZOSPeF2KZZUkVRwPWf5-wsOO2jbywdF7Z_ZzrD5bxAlq82QZCmGHbQniCVCsmEMsmj7P-MHnq6IqTWis3_EEVMgpb2Voml7kODN7pdql21zO1AwAk61mzR20MRAsOJyvNmRmTVTtS"/>
+                            <div class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-white/90 backdrop-blur px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-label-sm text-[8px] sm:text-[10px] tracking-widest text-primary font-bold">38:50</div>
+                        </div>
+                        <div class="p-3 sm:p-stack-md">
+                            <div class="flex flex-wrap justify-between items-start gap-1 sm:gap-2 mb-1 sm:mb-2">
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-on-tertiary-container">Oct 20, 2024</span>
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-secondary">Sarah Jenkins</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-on-surface mb-1 sm:mb-stack-sm">Unwavering Foundations</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant mb-3 sm:mb-stack-md line-clamp-2">Building your spiritual house on truths that can withstand the storms of life.</p>
+                            <button class="w-full flex items-center justify-center gap-2 border border-tertiary text-tertiary py-2 sm:py-3 rounded-lg font-label-md text-sm sm:text-base hover:bg-tertiary hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined text-lg">play_circle</span>
+                                WATCH ON YOUTUBE
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Archive Card 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden border border-primary/20 group">
+                        <div class="relative aspect-[16/9]">
+                            <img class="w-full h-full object-cover" data-alt="A macro image of ancient text on parchment, illuminated by soft morning light. The focus is sharp on a few beautiful calligraphic strokes, with the rest of the page falling into a soft blur. The style is classic yet contemporary in its photographic composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3OjpvYgCIpYWomSoMs4iri3UdKgKddWAlNvTom9LPeUGqYZUrH10LWXDmyuyIr8HXgaIFOk5X6F7l5l3cf0igWe92RHc5Tf_8J1k_7jkcq5iYV4ZBUg5v-g1GQ-N5vIcgtlHEH5vXiztQqDQW9MnfBUZW0f9KAPYHkYJ9uwrpISM3DDi3JRu5rkGpeBi8dArh0aejFCjYx7Jc2qXkYdGgrHWAJaxWXPxSm28rnGLHXPZ9HxyRDLcJ"/>
+                            <div class="absolute top-2 sm:top-4 right-2 sm:right-4 bg-white/90 backdrop-blur px-1.5 sm:px-2 py-0.5 sm:py-1 rounded font-label-sm text-[8px] sm:text-[10px] tracking-widest text-primary font-bold">51:04</div>
+                        </div>
+                        <div class="p-3 sm:p-stack-md">
+                            <div class="flex flex-wrap justify-between items-start gap-1 sm:gap-2 mb-1 sm:mb-2">
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-on-tertiary-container">Oct 13, 2024</span>
+                                <span class="font-label-sm text-[10px] sm:text-label-sm text-secondary">Elias Thorne</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-on-surface mb-1 sm:mb-stack-sm">The Ancient Future</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant mb-3 sm:mb-stack-md line-clamp-2">How ancient wisdom provides the roadmap for navigating future technological and social landscapes.</p>
+                            <button class="w-full flex items-center justify-center gap-2 border border-tertiary text-tertiary py-2 sm:py-3 rounded-lg font-label-md text-sm sm:text-base hover:bg-tertiary hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined text-lg">play_circle</span>
+                                WATCH ON YOUTUBE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 sm:mt-stack-xl text-center">
+                    <button class="px-6 sm:px-8 py-3 sm:py-4 bg-surface border border-primary/20 rounded-lg font-label-md text-sm sm:text-base text-primary hover:border-secondary hover:text-secondary transition-all">LOAD MORE SERMONS</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter / Community Section -->
+        <section class="py-8 sm:py-stack-xl bg-primary text-white text-center">
+            <div class="max-w-xl mx-auto px-4 sm:px-margin-mobile">
+                <span class="material-symbols-outlined text-3xl sm:text-4xl text-secondary mb-2 sm:mb-stack-sm">mail_outline</span>
+                <h2 class="font-headline-lg text-[22px] sm:text-headline-lg text-white mb-2 sm:mb-stack-sm">Stay Connected</h2>
+                <p class="font-body-md text-sm sm:text-body-md text-white/70 mb-4 sm:mb-stack-lg">Receive weekly study guides and sermon highlights directly in your inbox.</p>
+                <form class="flex flex-col sm:flex-row gap-2 sm:gap-stack-sm">
+                    <input class="flex-grow bg-white/10 border-white/20 rounded-lg text-white placeholder:text-white/40 focus:ring-secondary focus:border-secondary p-2.5 sm:p-3 text-sm" placeholder="Email address" type="email"/>
+                    <button class="bg-tertiary text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-label-md text-sm sm:text-base hover:bg-secondary transition-all" type="submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-dark border-t border-secondary/30" style="background-color: #121212;">
+        <div class="max-w-container-max mx-auto px-4 sm:px-margin-desktop py-6 sm:py-stack-lg">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+                <div class="col-span-1 md:col-span-1 space-y-3 sm:space-y-4">
+                    <span class="font-headline-md text-[18px] sm:text-headline-md text-secondary">Grace Sanctuary</span>
+                    <p class="font-body-md text-sm sm:text-body-md text-white/60 max-w-xs">© 2024 Grace Sanctuary. All rights reserved.</p>
+                    <div class="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+                    </div>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h5 class="font-label-md text-[10px] sm:text-label-md text-white border-l-2 border-secondary pl-2 sm:pl-3">Quick Links</h5>
+                    <ul class="flex flex-col gap-1.5 sm:gap-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors" href="#">Contact Us</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors" href="#">Location</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h5 class="font-label-md text-[10px] sm:text-label-md text-white border-l-2 border-secondary pl-2 sm:pl-3">Ministries</h5>
+                    <ul class="flex flex-col gap-1.5 sm:gap-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors" href="#">Youth Ministry</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors" href="#">Women's Fellowship</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors" href="#">Children's Ministry</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h5 class="font-label-md text-[10px] sm:text-label-md text-white border-l-2 border-secondary pl-2 sm:pl-3">Connect</h5>
+                    <div class="flex gap-3 sm:gap-4">
+                        <button class="p-2 text-white/60 hover:text-secondary transition-colors"><span class="material-symbols-outlined">brand_family</span></button>
+                        <button class="p-2 text-white/60 hover:text-secondary transition-colors"><span class="material-symbols-outlined">share</span></button>
+                        <button class="p-2 text-white/60 hover:text-secondary transition-colors"><span class="material-symbols-outlined">video_library</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 sm:mt-stack-lg pt-4 sm:pt-8 border-t border-secondary/30 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-0">
+                <p class="text-white/60 font-body-md text-xs sm:text-sm">© 2026 R.C.K Nairobi Church. All rights reserved.</p>
+                <div class="flex gap-4 sm:gap-6 text-white/60 text-xs sm:text-sm">
+                    <a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-secondary transition-colors" href="#">Member Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function openMobileMenu() {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.getElementById('menuOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Micro-interaction for TopNavBar scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolling-header');
+            } else {
+                header.classList.remove('scrolling-header');
+            }
+        });
+
+        // Simple smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body></html>

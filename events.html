@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Camp Meeting | R.C.K Nairobi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    // Royal Blue - primary
+                    "primary": "#002366",
+                    "primary-container": "#e8edf5",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#002366",
+                    "on-primary-fixed-variant": "#3f446d",
+                    "primary-fixed": "#dfe0ff",
+                    "primary-fixed-dim": "#bfc3f4",
+                    "inverse-primary": "#bfc3f4",
+                    
+                    // Golden Orange - secondary
+                    "secondary": "#FF8C00",
+                    "secondary-container": "#FFF0D0",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#4a2d00",
+                    "on-secondary-fixed-variant": "#8a5a00",
+                    "secondary-fixed": "#FFD699",
+                    "secondary-fixed-dim": "#F5B84C",
+                    
+                    // Revival Red - tertiary
+                    "tertiary": "#B22222",
+                    "tertiary-container": "#F5D0D0",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#4a0d0d",
+                    "on-tertiary-fixed-variant": "#7a1a1a",
+                    "tertiary-fixed": "#FFB3B3",
+                    "tertiary-fixed-dim": "#E68080",
+                    
+                    // White base
+                    "surface": "#ffffff",
+                    "surface-container": "#f8f9fa",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface": "#1a1a1a",
+                    "on-surface-variant": "#46464e",
+                    "inverse-surface": "#2e3132",
+                    "inverse-on-surface": "#f0f1f2",
+                    
+                    // Background - white
+                    "background": "#ffffff",
+                    "on-background": "#1a1a1a",
+                    
+                    // Other colors
+                    "outline": "#77767f",
+                    "outline-variant": "#c7c5cf",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#002366",
+                    
+                    // White text for titles on dark backgrounds
+                    "on-primary-container": "#000000",
+                    "on-secondary-container": "#000000",
+                    "on-tertiary-container": "#ffffff",
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "container-max": "1280px",
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Source Serif 4"],
+                    "display-lg-mobile": ["Source Serif 4"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-md": ["Source Serif 4"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-sm": ["Source Serif 4"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .image-strip-hover img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .image-strip-hover:hover img {
+            transform: scale(1.05);
+        }
+        .sticky-schedule {
+            position: sticky;
+            top: 140px;
+        }
+        
+        .scrolling-header {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        .logo-circle {
+            border-radius: 9999px !important;
+            overflow: hidden !important;
+        }
+        
+        .logo-circle img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-panel.open {
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background text-on-surface font-body-md overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-headline-md text-headline-md font-bold text-primary">R.C.K NAIROBI</span>
+            <button onclick="closeMobileMenu()" class="text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="index.html">HOME</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-2" href="events.html">YOUTH CAMP</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="youthrally.html">YOUTH RALLY</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="sermons.html">SERMONS</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="prayerconference.html">PRAYER CONFERENCE</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="christmaseve.html">CHRISTMAS EVE</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="gallery.html">GALLERY</a>
+            <a class="mt-4 inline-block px-6 py-3 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-center" href="#give">GIVE</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-primary/10">
+            <div class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary">location_on</span>
+                <span class="text-sm">NAIROBI, KENYA</span>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utility Top Bar -->
+    <div class="bg-primary text-white py-1.5 sm:py-2 px-3 sm:px-gutter relative z-[60]">
+        <div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center text-[10px] sm:text-[12px] font-label-md tracking-wider gap-1 sm:gap-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] text-secondary">location_on</span>
+                    <span class="hidden xs:inline">NAIROBI, KENYA</span>
+                    <span class="inline xs:hidden">NAIROBI</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3 md:gap-4 border-l border-white/20 pl-3 md:pl-4">
+                    <a class="hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                    <a class="hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            <a class="flex items-center gap-1 sm:gap-2 bg-tertiary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white font-bold hover:bg-secondary transition-all hover:scale-105 text-[9px] sm:text-[12px]" href="#">
+                <span class="material-symbols-outlined text-[12px] sm:text-[16px]">live_tv</span> 
+                <span class="hidden xs:inline">WATCH LIVE</span>
+                <span class="inline xs:hidden">LIVE</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="fixed top-[36px] sm:top-[40px] left-0 w-full z-50 glass-nav border-b border-primary/20 h-16 sm:h-20">
+        <nav class="max-w-container-max mx-auto px-3 sm:px-gutter py-2 sm:py-4 flex justify-between items-center h-full">
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1" onclick="openMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Nav Links Left -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-end pr-4 lg:pr-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="index.html">HOME</a>
+                <a class="border-b-2 border-secondary font-bold text-secondary text-sm lg:text-base" href="events.html">YOUTH CAMP</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="youthrally.html">YOUTH RALLY</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="sermons.html">SERMONS</a>
+            </div>
+            <!-- Brand Identity - Central Overlapping Circular Logo Container -->
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] bg-white rounded-full border-4 border-secondary shadow-lg flex flex-col items-center justify-center overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 -mb-4 sm:-mb-6 md:-mb-8 logo-circle">
+                    <div class="w-full h-full bg-surface-container flex items-center justify-center group cursor-pointer overflow-hidden logo-circle">
+                        <img src="img/churchlogo.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="#">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full md:hidden">
+                    <span class="text-[8px] sm:text-[10px] font-label-md tracking-[0.3em] text-secondary uppercase">NAIROBI</span>
+                </div>
+            </div>
+            <!-- Nav Links Right -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-start pl-4 lg:pl-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="prayerconference.html">PRAYER CONFERENCE</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="christmaseve.html">CHRISTMAS EVE</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="gallery.html">GALLERY</a>
+                <a class="inline-block px-4 lg:px-6 py-1.5 lg:py-2 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-xs lg:text-sm" href="#give">GIVE</a>
+            </div>
+            <!-- Mobile Action -->
+            <div class="md:hidden flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">volunteer_activism</span>
+                <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[70px] sm:pt-[80px] md:pt-[140px]">
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] sm:h-[70vh] md:h-[80vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="w-full h-full bg-cover bg-center scale-105" data-alt="A majestic and atmospheric landscape of rolling mountains at sunrise with golden light filtering through soft clouds. The scene is spiritual and serene, featuring a wide-angle view of nature's beauty in high-fidelity photography style, with deep navy shadows and warm gold highlights that reflect a sacred horizon design system." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAPwtmpO9h7yOwK-wOyDzqA5rGxJD4Tj8LO_aQkI7va3nTfmlGYLXXuzk4lUzifVWeBgYUApJdIw-wWRdeSuEFjgqKYRHBsLGyLmklNZpGxGlbNI0bCm-lBEoUI8w9NcwZyuwjF2fpBP8YzVA6R97ePpqhNBc-QLlPwuJ89Q893WuMXBi0-q5NKGUWeQqMI8A1rEl7b_z5SoaXc0yTLuxdgJlOeFI_j2xEZx7WcEM44mgnb7zeGNU8NCg')"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/40 via-transparent to-background"></div>
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-4 sm:px-gutter w-full">
+                <div class="max-w-2xl">
+                    <span class="font-label-md text-[10px] sm:text-label-md uppercase tracking-[0.3em] text-secondary mb-2 sm:mb-4 block">Annual Spiritual Retreat</span>
+                    <h1 class="font-display-lg text-[28px] sm:text-[36px] md:text-display-lg lg:text-7xl text-white mb-4 sm:mb-6 drop-shadow-xl">YOUTH CAMP 2026</h1>
+                    <p class="font-body-lg text-sm sm:text-body-lg text-white/90 mb-6 sm:mb-10 max-w-lg">Experience a divine transcendence in the heart of our community. Join us for four days of revival, worship, and connection.</p>
+                    <div class="flex flex-wrap gap-3 sm:gap-4">
+                        <button class="bg-tertiary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-label-md text-[10px] sm:text-label-md uppercase tracking-widest shadow-lg hover:bg-secondary transition-all">Register Today</button>
+                        <button class="bg-white/10 backdrop-blur-md border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-label-md text-[10px] sm:text-label-md uppercase tracking-widest hover:bg-white/20 transition-all">View Program</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Strips Section -->
+        <section class="py-10 sm:py-section-gap bg-surface">
+            <div class="max-w-container-max mx-auto px-4 sm:px-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 h-[400px] sm:h-[500px] md:h-[600px]">
+                    <div class="image-strip-hover relative overflow-hidden rounded-xl h-full shadow-md border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="A vertical, high-contrast photograph of a diverse church congregation lifted in prayer during a morning devotion. The lighting is soft and ethereal, coming from high windows, creating a sense of peace and community connection. The aesthetic is modern corporate with a deep navy and charcoal palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWIAVeVwJrn2UPGOVxTztNyG7llXDGDOMWH3IJ1071AimxzaEdNUOkA2S5gkEBBGum1RCT_fxkwidbL03xlOAaM_0QTn6QUYJXUG-jRAVrO0qxD9DpWx56_EZdVL54qJ5YBpafYqZ4UzzrdkPavg3D2XXaXiQxBl2aTaXjH31PSAfYz0EoagBNBmdn5XohHqC0_0u4fAVried6iHrWY4xkh2-xyOFPw3TRHVDXtVcv8fJAex54-xDmHg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-4 sm:p-8">
+                            <h3 class="font-headline-sm text-[16px] sm:text-headline-sm text-white">Spiritual Growth</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-white/70">Deepen your walk with Christ.</p>
+                        </div>
+                    </div>
+                    <div class="image-strip-hover relative overflow-hidden rounded-xl h-full shadow-md md:translate-y-12 border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="A vertical shot showing a close-up of a person reading a Bible with warm gold sunlight hitting the pages. The surrounding environment is a rustic outdoor setting, reflecting a mountain camp meeting atmosphere. The focus is sharp on the text with a soft bokeh background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP8UpvMuDRaNApCl2DBrtHWqO_ZCokstWi0LSh2_Tmdn63bN86dBkjBEMy6dCN9R1YrvoQ994wFouKaIDOejz_izDhTV1tHFFnmeDf4bvZjpYhEJHovY16qDn8HRYazUa7uDCJfk6V2ml6u2XSp_CQN_PO6ZTiMTV96Lys-oSdMvHoxlDH-OUXTg30yKoISmOP4d7l4gKLFdOZ-kY4Mp9h9SrOg-K8CEY6Ahy9mSmbljsWSzZ5Jtbnxg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-4 sm:p-8">
+                            <h3 class="font-headline-sm text-[16px] sm:text-headline-sm text-white">Scripture Focus</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-white/70">Unpacking the Word together.</p>
+                        </div>
+                    </div>
+                    <div class="image-strip-hover relative overflow-hidden rounded-xl h-full shadow-md border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="A vertical photograph capturing a vibrant youth encounter at an evening bonfire. Young people are engaged in joyful worship and laughter, with sparks from the fire rising into the night sky. The color palette features deep blues and warm sunset orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu7WVBV6kP7dopkiyzdD8JNiboFq2dxCExD-fGErGDKQOzLFAbpP1XDBc9jfJ7sKA56jov4TDVLFA7xlogDsmDo12KkA0DHlQl33RXjeW2MQdo30Paf2eC4lHzOYtAQzVxyybGPcF6zNLMAeAyjfNIP8tDSFWnXzmEeBjCd3YpuAwfci-fyPclCKIa-aH6J80oU4xBEyY8dbkfNJmQHg-qCh4eQ2EBaL_tOd0udZZuenSDuvYUOxGufg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-4 sm:p-8">
+                            <h3 class="font-headline-sm text-[16px] sm:text-headline-sm text-white">Youth Encounter</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-white/70">Igniting the next generation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scripture Highlight -->
+        <section class="bg-white py-10 sm:py-section-gap border-y border-primary/20">
+            <div class="max-w-3xl mx-auto px-4 sm:px-gutter text-center">
+                <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl mb-4 sm:mb-6">format_quote</span>
+                <blockquote class="font-display-lg text-[18px] sm:text-headline-md italic text-primary mb-4 sm:mb-6">
+                    "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing..."
+                </blockquote>
+                <cite class="font-label-md text-[10px] sm:text-label-md uppercase tracking-widest text-secondary">— Hebrews 10:24-25</cite>
+            </div>
+        </section>
+
+        <!-- Schedule Section (Launching Pad) -->
+        <section class="py-10 sm:py-section-gap bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-4 sm:px-gutter">
+                <div class="flex flex-col md:flex-row gap-8 sm:gap-16 relative">
+                    <!-- Left Sticky Column -->
+                    <div class="md:w-1/3">
+                        <div class="sticky-schedule">
+                            <span class="font-label-md text-[10px] sm:text-label-md uppercase tracking-[0.2em] text-secondary mb-3 sm:mb-4 block">The Itinerary</span>
+                            <h2 class="font-display-lg text-[24px] sm:text-display-lg text-primary mb-4 sm:mb-6">Launching Pad</h2>
+                            <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mb-6 sm:mb-8">Each session is carefully curated to lead you through a journey of spiritual awakening, from the first light of devotion to the power of evening revival.</p>
+                            <div class="p-6 sm:p-8 bg-primary rounded-2xl text-on-primary shadow-xl border border-secondary/30">
+                                <h4 class="font-headline-sm text-[16px] sm:text-headline-sm text-white mb-3 sm:mb-4">Venue Details</h4>
+                                <div class="flex items-center gap-3 mb-3 sm:mb-4">
+                                    <span class="material-symbols-outlined text-secondary">location_on</span>
+                                    <span class="font-body-md text-sm sm:text-body-md text-white">R.C.K Head Quarter, Nakuru</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-secondary">calendar_month</span>
+                                    <span class="font-body-md text-sm sm:text-body-md text-white">December 5th - 11th, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Scrollable Cards -->
+                    <div class="md:w-2/3 flex flex-col gap-4 sm:gap-8">
+                        <!-- Morning Devotion -->
+                        <div class="group bg-white p-4 sm:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-xl transition-all duration-500 border-l-4 border-l-secondary">
+                            <div class="flex flex-wrap justify-between items-start mb-3 sm:mb-4">
+                                <span class="bg-surface-container-highest px-3 sm:px-4 py-1 rounded-full font-label-md text-[10px] sm:text-xs uppercase text-primary">05:00 AM — 06:30 AM</span>
+                                <span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity">wb_sunny</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Morning Devotion</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">Start the day with silent meditation and guided prayer as the sun rises over the valley. A moment of pure connection with the Creator.</p>
+                        </div>
+                        <!-- Opening Worship -->
+                        <div class="group bg-white p-4 sm:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-xl transition-all duration-500 border-l-4 border-l-primary">
+                            <div class="flex flex-wrap justify-between items-start mb-3 sm:mb-4">
+                                <span class="bg-surface-container-highest px-3 sm:px-4 py-1 rounded-full font-label-md text-[10px] sm:text-xs uppercase text-primary">08:00 AM — 11:00 AM</span>
+                                <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">music_note</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Opening Worship</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">Gather with the entire congregation for a powerful session of praise and congregational hymns led by the R.C.K Choir.</p>
+                        </div>
+                        <!-- Bible Study -->
+                        <div class="group bg-white p-4 sm:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-xl transition-all duration-500 border-l-4 border-l-secondary">
+                            <div class="flex flex-wrap justify-between items-start mb-3 sm:mb-4">
+                                <span class="bg-surface-container-highest px-3 sm:px-4 py-1 rounded-full font-label-md text-[10px] sm:text-xs uppercase text-primary">11:30 AM — 01:00 PM</span>
+                                <span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity">auto_stories</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Bible Study</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">Inductive study sessions focusing on "The Divine Promise." Interactive breakout groups for all age categories.</p>
+                        </div>
+                        <!-- Boot-camp Session -->
+                        <div class="group bg-white p-4 sm:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-xl transition-all duration-500 border-l-4 border-l-tertiary">
+                            <div class="flex flex-wrap justify-between items-start mb-3 sm:mb-4">
+                                <span class="bg-surface-container-highest px-3 sm:px-4 py-1 rounded-full font-label-md text-[10px] sm:text-xs uppercase text-primary">02:30 PM — 04:30 PM</span>
+                                <span class="material-symbols-outlined text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">fitness_center</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Boot-camp Session</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">Equipping leaders and volunteers with practical ministry tools. A hands-on workshop focused on community outreach strategies.</p>
+                        </div>
+                        <!-- Youth Encounter -->
+                        <div class="group bg-white p-4 sm:p-8 rounded-2xl border border-primary/20 shadow-sm hover:shadow-xl transition-all duration-500 border-l-4 border-l-tertiary">
+                            <div class="flex flex-wrap justify-between items-start mb-3 sm:mb-4">
+                                <span class="bg-surface-container-highest px-3 sm:px-4 py-1 rounded-full font-label-md text-[10px] sm:text-xs uppercase text-primary">05:00 PM — 07:00 PM</span>
+                                <span class="material-symbols-outlined text-tertiary opacity-0 group-hover:opacity-100 transition-opacity">bolt</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Youth Encounter</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">A dynamic space for the younger generation to explore faith through music, creative arts, and relevant dialogue.</p>
+                        </div>
+                        <!-- Evening Revival -->
+                        <div class="group bg-primary p-4 sm:p-8 rounded-2xl border border-secondary/30 shadow-xl hover:-translate-y-2 transition-all duration-500">
+                            <div class="flex flex-wrap justify-between items-start mb-3 sm:mb-4">
+                                <span class="bg-secondary px-3 sm:px-4 py-1 rounded-full font-label-md text-[10px] sm:text-xs uppercase text-white">07:30 PM — LATE</span>
+                                <span class="material-symbols-outlined text-secondary">auto_awesome</span>
+                            </div>
+                            <h3 class="font-headline-md text-[16px] sm:text-headline-md text-white mb-1 sm:mb-2">Evening Revival</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-white/80">The pinnacle of each day. Expect a powerful word, corporate intercession, and a transformative atmosphere of revival.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 sm:py-24 bg-primary relative overflow-hidden">
+            <div class="relative z-10 max-w-container-max mx-auto px-4 sm:px-gutter text-center">
+                <h2 class="font-display-lg text-[24px] sm:text-display-lg text-white mb-4 sm:mb-8">Will you be there?</h2>
+                <p class="font-body-lg text-sm sm:text-body-lg text-white/80 mb-8 sm:mb-12 max-w-2xl mx-auto">Registration covers accommodation, meals, and all workshop materials. Don't miss this opportunity for a divine reset.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+                    <button class="bg-tertiary text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-headline-sm text-[14px] sm:text-base hover:bg-secondary transition-all">Register for $25</button>
+                    <button class="bg-transparent border border-white/40 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-headline-sm text-[14px] sm:text-base hover:bg-white/10 transition-colors">Sponsor a Youth</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-dark py-10 sm:py-section-gap border-t border-secondary/30" style="background-color: #121212;">
+        <div class="max-w-container-max mx-auto px-4 sm:px-gutter">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-stack-lg">
+                <div class="flex flex-col gap-3 sm:gap-6">
+                    <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-secondary">R.C.K Mathare</h3>
+                    <p class="font-body-md text-sm sm:text-body-md text-white/60">Rooted in Christ, Reaching the Community. A light in the heart of Mathare.</p>
+                    <div class="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-[10px] sm:text-label-md uppercase text-white mb-3 sm:mb-6 border-l-2 border-secondary pl-2 sm:pl-3">Quick Links</h4>
+                    <ul class="flex flex-col gap-2 sm:gap-3">
+                        <li><a class="font-body-md text-sm sm:text-body-md text-white/60 hover:text-secondary transition-colors" href="#">Location</a></li>
+                        <li><a class="font-body-md text-sm sm:text-body-md text-white/60 hover:text-secondary transition-colors" href="#">Service Times</a></li>
+                        <li><a class="font-body-md text-sm sm:text-body-md text-white/60 hover:text-secondary transition-colors" href="#">Give</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-[10px] sm:text-label-md uppercase text-white mb-3 sm:mb-6 border-l-2 border-secondary pl-2 sm:pl-3">Contact Us</h4>
+                    <ul class="flex flex-col gap-2 sm:gap-3">
+                        <li class="flex items-center gap-3 text-white/60">
+                            <span class="material-symbols-outlined text-sm text-secondary">mail</span>
+                            <span class="font-body-md text-sm sm:text-body-md">info@rckmathare.org</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-white/60">
+                            <span class="material-symbols-outlined text-sm text-secondary">phone</span>
+                            <span class="font-body-md text-sm sm:text-body-md">+254 700 000000</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-[10px] sm:text-label-md uppercase text-white mb-3 sm:mb-6 border-l-2 border-secondary pl-2 sm:pl-3">Stay Connected</h4>
+                    <div class="flex gap-3 sm:gap-4">
+                        <a class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all" href="#">
+                            <span class="material-symbols-outlined text-[16px] sm:text-[20px]">face_nod</span>
+                        </a>
+                        <a class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all" href="#">
+                            <span class="material-symbols-outlined text-[16px] sm:text-[20px]">smart_display</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 sm:mt-section-gap pt-4 sm:pt-8 border-t border-secondary/30 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+                <p class="font-body-md text-white/60 text-xs sm:text-sm">© 2026 R.C.K NAIROBI CHURCH. All rights reserved.</p>
+                <div class="flex gap-4 sm:gap-6">
+                    <a class="font-body-md text-white/60 text-xs sm:text-sm hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+                    <a class="font-body-md text-white/60 text-xs sm:text-sm hover:text-secondary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function openMobileMenu() {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.getElementById('menuOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Micro-interaction for smooth revealing of cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+        
+        // Scrolling header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolling-header');
+            } else {
+                header.classList.remove('scrolling-header');
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Ministries | R.C.K Mathare Church</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        // Royal Blue - primary
+                        "primary": "#002366",
+                        "primary-container": "#e8edf5",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#002366",
+                        "on-primary-fixed-variant": "#3f446d",
+                        "primary-fixed": "#dfe0ff",
+                        "primary-fixed-dim": "#bfc3f4",
+                        "inverse-primary": "#bfc3f4",
+                        
+                        // Golden Orange - secondary
+                        "secondary": "#FF8C00",
+                        "secondary-container": "#FFF0D0",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#4a2d00",
+                        "on-secondary-fixed-variant": "#8a5a00",
+                        "secondary-fixed": "#FFD699",
+                        "secondary-fixed-dim": "#F5B84C",
+                        
+                        // Revival Red - tertiary
+                        "tertiary": "#B22222",
+                        "tertiary-container": "#F5D0D0",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#4a0d0d",
+                        "on-tertiary-fixed-variant": "#7a1a1a",
+                        "tertiary-fixed": "#FFB3B3",
+                        "tertiary-fixed-dim": "#E68080",
+                        
+                        // White base
+                        "surface": "#ffffff",
+                        "surface-container": "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "surface-variant": "#e1e3e4",
+                        "on-surface": "#1a1a1a",
+                        "on-surface-variant": "#46464e",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        
+                        // Background - white
+                        "background": "#ffffff",
+                        "on-background": "#1a1a1a",
+                        
+                        // Other colors
+                        "outline": "#77767f",
+                        "outline-variant": "#c7c5cf",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#002366",
+                        
+                        // White text for titles on dark backgrounds
+                        "on-primary-container": "#000000",
+                        "on-secondary-container": "#000000",
+                        "on-tertiary-container": "#ffffff",
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "section-gap": "80px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["\"Source Serif 4\""],
+                        "display-lg-mobile": ["\"Source Serif 4\""],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["\"Source Serif 4\""],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {
+                            "lineHeight": "56px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "display-lg-mobile": ["36px", {
+                            "lineHeight": "44px",
+                            "fontWeight": "700"
+                        }],
+                        "label-md": ["14px", {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }],
+                        "body-lg": ["18px", {
+                            "lineHeight": "28px",
+                            "fontWeight": "400"
+                        }],
+                        "headline-sm": ["24px", {
+                            "lineHeight": "32px",
+                            "fontWeight": "600"
+                        }],
+                        "headline-md": ["32px", {
+                            "lineHeight": "40px",
+                            "fontWeight": "600"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        .stagger-load>* {
+            opacity: 0;
+        }
+        
+        .reveal {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        
+        .ministry-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .ministry-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 35, 102, 0.12);
+        }
+        
+        .ministry-card:hover .card-glow {
+            opacity: 1;
+        }
+        
+        .card-glow {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255, 140, 0, 0.15) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        
+        .scrolling-header {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        .logo-circle {
+            border-radius: 9999px !important;
+            overflow: hidden !important;
+        }
+        
+        .logo-circle img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-panel.open {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-headline-md text-headline-md font-bold text-primary">R.C.K NAIROBI</span>
+            <button onclick="closeMobileMenu()" class="text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="about.html">About Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-2" href="ministries.html">Ministries</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="sermons.html">Sermons</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="events.html">Events</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="contact.html">Contact</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="gallery.html">Gallery</a>
+            <a class="mt-4 inline-block px-6 py-3 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-center" href="#give">GIVE</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-primary/10">
+            <div class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary">location_on</span>
+                <span class="text-sm">NAIROBI, KENYA</span>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utility Top Bar -->
+    <div class="bg-primary text-white py-1.5 sm:py-2 px-3 sm:px-gutter relative z-[60]">
+        <div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center text-[10px] sm:text-[12px] font-label-md tracking-wider gap-1 sm:gap-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] text-secondary">location_on</span>
+                    <span class="hidden xs:inline">NAIROBI, KENYA</span>
+                    <span class="inline xs:hidden">NAIROBI</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3 md:gap-4 border-l border-white/20 pl-3 md:pl-4">
+                    <a class="hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                    <a class="hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            <a class="flex items-center gap-1 sm:gap-2 bg-tertiary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white font-bold hover:bg-secondary transition-all hover:scale-105 text-[9px] sm:text-[12px]" href="#">
+                <span class="material-symbols-outlined text-[12px] sm:text-[16px]">live_tv</span> 
+                <span class="hidden xs:inline">WATCH LIVE</span>
+                <span class="inline xs:hidden">LIVE</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="fixed top-[36px] sm:top-[40px] left-0 w-full z-50 glass-nav border-b border-primary/20 h-16 sm:h-20">
+        <nav class="max-w-container-max mx-auto px-3 sm:px-gutter py-2 sm:py-4 flex justify-between items-center h-full">
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1" onclick="openMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Nav Links Left -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-end pr-4 lg:pr-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="index.html">HOME</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="about.html">ABOUT US</a>
+                <a class="border-b-2 border-secondary font-bold text-secondary text-sm lg:text-base" href="ministries.html">MINISTRIES</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="sermons.html">SERMONS</a>
+            </div>
+            <!-- Brand Identity - Central Overlapping Circular Logo Container -->
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] bg-white rounded-full border-4 border-secondary shadow-lg flex flex-col items-center justify-center overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 -mb-4 sm:-mb-6 md:-mb-8 logo-circle">
+                    <div class="w-full h-full bg-surface-container flex items-center justify-center group cursor-pointer overflow-hidden logo-circle">
+                        <img src="img/churchlogo.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="#">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full md:hidden">
+                    <span class="text-[8px] sm:text-[10px] font-label-md tracking-[0.3em] text-secondary uppercase">NAIROBI</span>
+                </div>
+            </div>
+            <!-- Nav Links Right -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-start pl-4 lg:pl-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="events.html">EVENTS</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="contact.html">CONTACT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="gallery.html">GALLERY</a>
+                <a class="inline-block px-4 lg:px-6 py-1.5 lg:py-2 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-xs lg:text-sm" href="#give">GIVE</a>
+            </div>
+            <!-- Mobile Action -->
+            <div class="md:hidden flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">volunteer_activism</span>
+                <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-[70px] sm:pt-[80px] md:pt-[140px]">
+        <!-- Hero Section -->
+        <section class="relative h-[40vh] sm:h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-primary/40 z-10"></div>
+                <div class="w-full h-full bg-cover bg-center" data-alt="A majestic church interior with high vaulted ceilings and large stained glass windows where warm, ethereal morning sunlight breaks through light clouds outside, casting a spiritual glow and long shadows across the empty wooden pews. The atmosphere is peaceful, serene, and transcendent, captured with a soft-focus lens in a high-fidelity light-mode style with deep blue and gold undertones."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkIsS1MZhrt0Vzi3iSFZ7utnEbdrwuzFPt-n9cbvFgAdaZSqGe2QIUbOkRJwgxYrTMgny71q-6AH8j5vCk1jm-w70igGX4PDxZXR0kfWfaMsjb5ZvkEAP5lCT4tKaVDBWJNhsyxu_wJr3dzAuo6aqF_Cz0jNuJwRZUynMGPrR2giU9soWxzlU-Kqia7RY8u3tKJbhzvq-01WErGiZh3rc31wt4tkXPCEjfLfdOovmrEgHoGhuevjPcFg')">
+                </div>
+            </div>
+            <div class="relative z-20 text-center px-4 sm:px-gutter max-w-4xl animate-fade-in-up">
+                <span class="text-secondary font-label-md text-[10px] sm:text-label-md tracking-widest uppercase mb-2 sm:mb-4 block">Serving Our Community</span>
+                <h1 class="text-white font-display-lg text-[28px] sm:text-display-lg-mobile md:text-display-lg mb-4 sm:mb-6 leading-tight">OUR MINISTRIES</h1>
+                <div class="w-16 sm:w-24 h-1 bg-secondary mx-auto"></div>
+            </div>
+        </section>
+
+        <!-- Intro Text -->
+        <section class="py-10 sm:py-section-gap px-4 sm:px-gutter bg-surface">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-on-surface-variant font-body-lg text-sm sm:text-base italic">"For even the Son of Man did not come to be served, but to serve, and to give his life as a ransom for many." — Mark 10:45</p>
+            </div>
+        </section>
+
+        <!-- Ministries Grid -->
+        <section class="pb-10 sm:pb-section-gap px-4 sm:px-gutter max-w-container-max mx-auto" id="ministries-grid">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-stack-lg stagger-load">
+                <!-- Youth Ministry -->
+                <div class="ministry-card relative group bg-surface-container-lowest rounded-xl overflow-hidden border border-primary/20 flex flex-col h-full">
+                    <div class="card-glow"></div>
+                    <div class="h-48 sm:h-56 md:h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A group of diverse, energetic young people in their late teens and early twenties laughing and engaged in joyful fellowship inside a modern community hall. The lighting is warm and golden, reflecting a vibrant and hopeful mood. The composition is dynamic, showing genuine connection and spiritual excitement in a clean, professional aesthetic consistent with a modern church brand."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7v1zl4dpWFG3ANv_tgqPfzvaRoo-tkW4qE03FqOwWcpR4f1tzPwZnLFxFgrGlXREAlqBQiiTRaq1IB2RzCi7GlRaxODuDYjRISJygfqujMF-IwpTHVe-luobERn5Gwe7Qh-aZHh8G812gEsoOfrj9DiKIDMMJioey06KESH-3Y6U9kFEQMSCPbkNUZ1ExAtSFfL5bveuGBLNCkx_LrYWQkcL2v2q7PGROcOgH6i3SiDSNGgTFHP_XXw"
+                        />
+                    </div>
+                    <div class="p-4 sm:p-stack-lg flex flex-col flex-grow">
+                        <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-primary mb-2 sm:mb-4">Youth Ministry</h3>
+                        <p class="text-on-surface-variant font-body-md text-sm sm:text-base mb-4 sm:mb-6 flex-grow leading-relaxed">
+                            Empowering the next generation to know Christ, live with purpose, and impact the world. We provide a safe and inspiring environment where young people can grow spiritually, connect with others, and serve God with confidence.
+                        </p>
+                        <a class="inline-flex items-center text-secondary font-label-md text-sm sm:text-base group/link hover:gap-2 transition-all" href="#">
+                            join us <span class="material-symbols-outlined ml-1 sm:ml-2 text-sm"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Choir -->
+                <div class="ministry-card relative group bg-surface-container-lowest rounded-xl overflow-hidden border border-primary/20 flex flex-col h-full">
+                    <div class="card-glow"></div>
+                    <div class="h-48 sm:h-56 md:h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A passionate church choir singing with closed eyes and expressions of deep worship. They are dressed in elegant, coordinated navy and gold attire, standing on a stage with soft theatrical lighting. The atmosphere is powerful and soul-stirring, focusing on the spiritual emotion of the music. High-end photography with a shallow depth of field and warm lens flares."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnLijSP40-mkQjwUZQ0juMf1D4M9Gp002PhUZSEdJVsEadIltIVg2hyK3eCG6uNordwKTVCN8pPZZ6AgYrLr5kUTVdCUr9BkESPbLh4N1tCntuL2RpTPmaqK_eprotMc0L-HkxtEFIvMb0c48qPknRaf12awA6P3xdUTAsiWhFg3CroD9FtNi__GzjOCWk61J5L4AXsehkHtQTD1IK-IfmhQuEr36I5eu2ttOmWiUzQ07bMT3acS_iYA"
+                        />
+                    </div>
+                    <div class="p-4 sm:p-stack-lg flex flex-col flex-grow">
+                        <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-primary mb-2 sm:mb-4">Choir</h3>
+                        <p class="text-on-surface-variant font-body-md text-sm sm:text-base mb-4 sm:mb-6 flex-grow leading-relaxed">
+                            Music is a powerful expression of faith, and our Choir Ministry seeks to honor God through every note sung. We are committed to leading meaningful worship experiences that inspire, encourage, and draw people into a deeper relationship with Jesus Christ.
+                        </p>
+                        <p class="text-on-surface-variant text-sm sm:text-base mb-3 sm:mb-4">Join us every Saturday from 2:00 PM to 5:00 PM at our church for a worship experience as we serve God in our voices.</p>
+                        <a class="inline-flex items-center text-secondary font-label-md text-sm sm:text-base group/link hover:gap-2 transition-all" href="#">
+                            Join the Voice <span class="material-symbols-outlined ml-1 sm:ml-2 text-sm"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Children's Sunday School -->
+                <div class="ministry-card relative group bg-surface-container-lowest rounded-xl overflow-hidden border border-primary/20 flex flex-col h-full">
+                    <div class="card-glow"></div>
+                    <div class="h-48 sm:h-56 md:h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A bright, colorful Sunday School classroom where several children of various ages are gathered around a low table, smiling and engaged in a hands-on Bible lesson activity. A kind teacher is leaning in to help. The room is filled with soft natural light, creating a welcoming and nurturing atmosphere. The design is clean, minimalist, and focuses on the joy of learning."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeu0vm6A2kNdPrG7-sybOeK9utwxFlDdv_iJ9Y4UsYlvka11TUvfYH8o_L6J045RW6A8gWd5ZnTQiUCm79rxtE3j6oZ37Eo3-HrxE0NhsYhRh4zWG2zv0BpaWq13fXjaIs0kAdJxmCPX3SoidIXwtr7_mJ6Az9-IXaFatvUamJZl6AHXOwXwaEnl0dmCBN_TeBQusMV3l3cvhPEjCP1hN31jg9m3CiUGBn3zDH2GkAFcSYUHnS-pqLjg"
+                        />
+                    </div>
+                    <div class="p-4 sm:p-stack-lg flex flex-col flex-grow">
+                        <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-primary mb-2 sm:mb-4">Children's Sunday School</h3>
+                        <p class="text-on-surface-variant font-body-md text-sm sm:text-base mb-4 sm:mb-6 flex-grow leading-relaxed">
+                            Our Sunday School Ministry is dedicated to nurturing children in the knowledge and love of God. Through age-appropriate Bible lessons, worship, activities, and prayer, we help young hearts grow in faith and develop a strong foundation in God's Word.
+                        </p>
+                        <p class="text-on-surface-variant text-sm sm:text-base mb-3 sm:mb-4">Sunday School classes are divided in respect to age for appropriate nurturing of the coming generation. Every sunday from 8:00 AM to 9:00 PM, bring your child and let them learn from our abled teachers on the righteous way of life.</p>
+                        <p class="text-on-surface-variant text-sm sm:text-base mb-3 sm:mb-4">Mathew 19:14 Jesus said, "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these."</p>
+                        <a class="inline-flex items-center text-secondary font-label-md text-sm sm:text-base group/link hover:gap-2 transition-all" href="#">
+                            Welcome <span class="material-symbols-outlined ml-1 sm:ml-2 text-sm"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Women's Fellowship -->
+                <div class="ministry-card relative group bg-surface-container-lowest rounded-xl overflow-hidden border border-primary/20 flex flex-col h-full">
+                    <div class="card-glow"></div>
+                    <div class="h-48 sm:h-56 md:h-64 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="A supportive circle of diverse women sitting in a cozy, sunlit room, some holding Bibles and coffee cups, sharing a moment of deep connection and laughter. The mood is one of true sisterhood, friendship, and spiritual support. The photography uses warm tones, soft textures, and a professional, modern aesthetic that feels intimate and welcoming."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiL-lqkdnkOhucyq-dcct2Vql9Hu2s1iQAutUTvHieR2zcAwplm2XZm-SyMczItr4XX0qINNv_VY4J8xvUKKHTfFGanJFgQz6mUcjPqRSN9Cw5_UOBYgdtKE7WeU25XIlG88s49iuIebESwINYQSANAHADKCoUAwEOi8CKYmbZ1xPOSbVMqlc_0cH2M9MdhN8pl5APuqJEWnV7h9QDmg5BfVE_MUS6cWvEC-uoF8ayoa52-Y4kgXo-mw"
+                        />
+                    </div>
+                    <div class="p-4 sm:p-stack-lg flex flex-col flex-grow">
+                        <h3 class="font-headline-sm text-[18px] sm:text-headline-sm text-primary mb-2 sm:mb-4">Women's Fellowship</h3>
+                        <p class="text-on-surface-variant font-body-md text-sm sm:text-base mb-4 sm:mb-6 flex-grow leading-relaxed">
+                            Our Women's Fellowship Ministry is a community of women united in faith, friendship, and service. Through prayer, Bible study, mentorship, and fellowship, we encourage one another to grow spiritually, strengthen our families, and live out God's purpose
+                            in our daily lives.
+                        </p>
+                        <a class="inline-flex items-center text-secondary font-label-md text-sm sm:text-base group/link hover:gap-2 transition-all" href="#">Connect Today <span class="material-symbols-outlined ml-1 sm:ml-2 text-sm"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Section -->
+        <section class="py-10 sm:py-section-gap bg-primary text-on-primary">
+            <div class="max-w-container-max mx-auto px-4 sm:px-gutter text-center">
+                <h2 class="font-headline-md text-[20px] sm:text-headline-md text-white mb-3 sm:mb-stack-md">And So Much More...</h2>
+                <p class="text-white/80 max-w-2xl mx-auto mb-4 sm:mb-stack-lg font-body-lg text-sm sm:text-base">Beyond our main ministries, we have active teams Open Air, Men's Bible Study, door to door fellowship, and Technical Production. There is a place for everyone at R.C.K Mathare.</p>
+                <button class="bg-tertiary text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-label-md text-[10px] sm:text-label-md uppercase tracking-widest hover:bg-secondary transition-all shadow-lg">
+                    Experience God's Love with Us
+                </button>
+            </div>
+        </section>
+
+        <!-- Scripture Quote -->
+        <section class="py-10 sm:py-section-gap bg-surface-container-low">
+            <div class="max-w-4xl mx-auto px-4 sm:px-gutter text-center">
+                <div class="text-secondary opacity-50 mb-3 sm:mb-stack-md">
+                    <span class="material-symbols-outlined text-4xl sm:text-6xl"></span>
+                </div>
+                <p class="font-display-lg text-[16px] sm:text-headline-sm italic text-on-surface-variant leading-relaxed">
+                    "Each of you should use whatever gift you have received to serve others, as faithful stewards of God's grace in its various forms."
+                </p>
+                <p class="mt-3 sm:mt-stack-md font-label-md text-[12px] sm:text-label-md text-primary">— 1 Peter 4:10</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-dark py-10 sm:py-section-gap border-t border-secondary/30" style="background-color: #121212;">
+        <div class="max-w-container-max mx-auto px-4 sm:px-gutter">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-stack-lg">
+                <div class="col-span-1 md:col-span-1 space-y-3 sm:space-y-4">
+                    <h2 class="font-headline-sm text-[18px] sm:text-headline-sm text-secondary">R.C.K NAIROBI</h2>
+                    <p class="text-white/60 font-body-md text-sm sm:text-base">Spreading the word of God and building a strong community of believers in the heart of Mathare.</p>
+                    <div class="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+                    </div>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h3 class="text-white font-label-md text-[10px] sm:text-label-md uppercase tracking-wider border-l-2 border-secondary pl-2 sm:pl-3">Quick Links</h3>
+                    <ul class="flex flex-col gap-1.5 sm:gap-2">
+                        <li><a class="text-white/60 hover:text-secondary transition-colors font-body-md text-sm sm:text-base hover:underline" href="#">Location</a></li>
+                        <li><a class="text-white/60 hover:text-secondary transition-colors font-body-md text-sm sm:text-base hover:underline" href="#">Service Times</a></li>
+                        <li><a class="text-white/60 hover:text-secondary transition-colors font-body-md text-sm sm:text-base hover:underline" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h3 class="text-white font-label-md text-[10px] sm:text-label-md uppercase tracking-wider border-l-2 border-secondary pl-2 sm:pl-3">Legal</h3>
+                    <ul class="flex flex-col gap-1.5 sm:gap-2">
+                        <li><a class="text-white/60 hover:text-secondary transition-colors font-body-md text-sm sm:text-base hover:underline" href="#">Privacy Policy</a></li>
+                        <li><a class="text-white/60 hover:text-secondary transition-colors font-body-md text-sm sm:text-base hover:underline" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h3 class="text-white font-label-md text-[10px] sm:text-label-md uppercase tracking-wider border-l-2 border-secondary pl-2 sm:pl-3">Support</h3>
+                    <a class="text-secondary font-bold text-sm sm:text-base hover:underline" href="#">Give Now</a>
+                    <div class="mt-3 sm:mt-stack-lg flex gap-3 sm:gap-4">
+                        <span class="material-symbols-outlined text-white/60 cursor-pointer hover:text-secondary transition-colors">face_nod</span>
+                        <span class="material-symbols-outlined text-white/60 cursor-pointer hover:text-secondary transition-colors">music_video</span>
+                        <span class="material-symbols-outlined text-white/60 cursor-pointer hover:text-secondary transition-colors">alternate_email</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 sm:mt-section-gap pt-4 sm:pt-8 border-t border-secondary/30 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-0">
+                <p class="text-on-surface font-label-md text-white/60 text-xs sm:text-sm">© 2026 R.C.K NAIROBI CHURCH. All rights reserved.</p>
+                <div class="flex gap-4 sm:gap-6">
+                    <a class="text-white/60 text-xs sm:text-sm hover:text-secondary transition-colors" href="#">Terms of Service</a>
+                    <a class="text-white/60 text-xs sm:text-sm hover:text-secondary transition-colors" href="#">Member Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function openMobileMenu() {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.getElementById('menuOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // For children of the staggered grid
+                        if (entry.target.classList.contains('stagger-load')) {
+                            Array.from(entry.target.children).forEach((child, i) => {
+                                setTimeout(() => {
+                                    child.classList.add('reveal');
+                                }, i * 200);
+                            });
+                        } else {
+                            entry.target.classList.add('reveal');
+                        }
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.stagger-load, .ministry-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Sticky nav effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolling-header');
+                } else {
+                    header.classList.remove('scrolling-header');
+                }
+            });
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+
+</html>

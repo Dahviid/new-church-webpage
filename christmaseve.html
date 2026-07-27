@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Great Joy 2025 | RCK Nairobi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    // Royal Blue - primary
+                    "primary": "#002366",
+                    "primary-container": "#e8edf5",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#002366",
+                    "on-primary-fixed-variant": "#3f446d",
+                    "primary-fixed": "#dfe0ff",
+                    "primary-fixed-dim": "#bfc3f4",
+                    "inverse-primary": "#bfc3f4",
+                    
+                    // Golden Orange - secondary
+                    "secondary": "#FF8C00",
+                    "secondary-container": "#FFF0D0",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#4a2d00",
+                    "on-secondary-fixed-variant": "#8a5a00",
+                    "secondary-fixed": "#FFD699",
+                    "secondary-fixed-dim": "#F5B84C",
+                    
+                    // Revival Red - tertiary
+                    "tertiary": "#B22222",
+                    "tertiary-container": "#F5D0D0",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#4a0d0d",
+                    "on-tertiary-fixed-variant": "#7a1a1a",
+                    "tertiary-fixed": "#FFB3B3",
+                    "tertiary-fixed-dim": "#E68080",
+                    
+                    // White base
+                    "surface": "#ffffff",
+                    "surface-container": "#f8f9fa",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface": "#1a1a1a",
+                    "on-surface-variant": "#46464e",
+                    "inverse-surface": "#2e3132",
+                    "inverse-on-surface": "#f0f1f2",
+                    
+                    // Background - white
+                    "background": "#ffffff",
+                    "on-background": "#1a1a1a",
+                    
+                    // Other colors
+                    "outline": "#77767f",
+                    "outline-variant": "#c7c5cf",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#002366",
+                    
+                    // White text for titles on dark backgrounds
+                    "on-primary-container": "#000000",
+                    "on-secondary-container": "#000000",
+                    "on-tertiary-container": "#ffffff",
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "48px",
+                    "gutter": "16px",
+                    "base": "4px",
+                    "container-margin-mobile": "20px",
+                    "stack-md": "24px",
+                    "stack-sm": "8px",
+                    "container-margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["\"Source Serif 4\""],
+                    "display-lg-mobile": ["\"Source Serif 4\""],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-sm": ["\"Source Serif 4\""],
+                    "headline-md": ["\"Source Serif 4\""],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {
+                        "lineHeight": "56px",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }],
+                    "display-lg-mobile": ["36px", {
+                        "lineHeight": "44px",
+                        "fontWeight": "700"
+                    }],
+                    "label-md": ["14px", {
+                        "lineHeight": "20px",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "600"
+                    }],
+                    "body-lg": ["18px", {
+                        "lineHeight": "28px",
+                        "fontWeight": "400"
+                    }],
+                    "headline-sm": ["24px", {
+                        "lineHeight": "32px",
+                        "fontWeight": "600"
+                    }],
+                    "headline-md": ["32px", {
+                        "lineHeight": "40px",
+                        "fontWeight": "600"
+                    }],
+                    "body-md": ["16px", {
+                        "lineHeight": "24px",
+                        "fontWeight": "400"
+                    }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .tonal-layer-1 { background-color: rgba(0, 35, 102, 0.05); }
+        .tonal-layer-2 { background-color: rgba(0, 35, 102, 0.08); border: 1px solid rgba(255, 140, 0, 0.3); }
+        .glow-gold { text-shadow: 0 0 15px rgba(255, 140, 0, 0.4); }
+        .pulse-indicator {
+            width: 8px;
+            height: 8px;
+            background-color: #B22222;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px #B22222;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            70% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.7; }
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0, 35, 102, 0.4) 0%, rgba(255, 255, 255, 1) 95%);
+        }
+        .scrolling-header {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        .logo-circle {
+            border-radius: 9999px !important;
+            overflow: hidden !important;
+        }
+        
+        .logo-circle img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-panel.open {
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary/30 overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-headline-md text-headline-md font-bold text-primary">R.C.K NAIROBI</span>
+            <button onclick="closeMobileMenu()" class="text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="index.html">HOME</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-2" href="christmaseve.html">CHRISTMAS EVE</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="youthrally.html">YOUTH RALLY</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="prayerconference.html">PRAYER CONFERENCE</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="sermons.html">SERMONS</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="gallery.html">GALLERY</a>
+            <a class="mt-4 inline-block px-6 py-3 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-center" href="#give">GIVE</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-primary/10">
+            <div class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary">location_on</span>
+                <span class="text-sm">NAIROBI, KENYA</span>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utility Top Bar -->
+    <div class="bg-primary text-white py-1.5 sm:py-2 px-3 sm:px-gutter relative z-[60]">
+        <div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center text-[10px] sm:text-[12px] font-label-md tracking-wider gap-1 sm:gap-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] text-secondary">location_on</span>
+                    <span class="hidden xs:inline">NAIROBI, KENYA</span>
+                    <span class="inline xs:hidden">NAIROBI</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3 md:gap-4 border-l border-white/20 pl-3 md:pl-4">
+                    <a class="hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                    <a class="hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            <a class="flex items-center gap-1 sm:gap-2 bg-tertiary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white font-bold hover:bg-secondary transition-all hover:scale-105 text-[9px] sm:text-[12px]" href="#">
+                <span class="material-symbols-outlined text-[12px] sm:text-[16px]">live_tv</span> 
+                <span class="hidden xs:inline">WATCH LIVE</span>
+                <span class="inline xs:hidden">LIVE</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="fixed top-[36px] sm:top-[40px] left-0 w-full z-50 glass-nav border-b border-primary/20 h-16 sm:h-20">
+        <nav class="max-w-container-max mx-auto px-3 sm:px-gutter py-2 sm:py-4 flex justify-between items-center h-full">
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1" onclick="openMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Nav Links Left -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-end pr-4 lg:pr-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="index.html">HOME</a>
+                <a class="border-b-2 border-secondary font-bold text-secondary text-sm lg:text-base" href="christmaseve.html">CHRISTMAS EVE</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="youthrally.html">YOUTH RALLY</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="sermons.html">SERMONS</a>
+            </div>
+            <!-- Brand Identity - Central Overlapping Circular Logo Container -->
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] bg-white rounded-full border-4 border-secondary shadow-lg flex flex-col items-center justify-center overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 -mb-4 sm:-mb-6 md:-mb-8 logo-circle">
+                    <div class="w-full h-full bg-surface-container flex items-center justify-center group cursor-pointer overflow-hidden logo-circle">
+                        <img src="img/churchlogo.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="#">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full md:hidden">
+                    <span class="text-[8px] sm:text-[10px] font-label-md tracking-[0.3em] text-secondary uppercase">NAIROBI</span>
+                </div>
+            </div>
+            <!-- Nav Links Right -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-start pl-4 lg:pl-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="prayerconference.html">PRAYER CONFERENCE</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="gallery.html">GALLERY</a>
+                <a class="inline-block px-4 lg:px-6 py-1.5 lg:py-2 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-xs lg:text-sm" href="#give">GIVE</a>
+            </div>
+            <!-- Mobile Action -->
+            <div class="md:hidden flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">volunteer_activism</span>
+                <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="pt-[70px] sm:pt-[80px] md:pt-[140px]">
+        <!-- Hero Section -->
+        <section class="relative h-[600px] sm:h-[700px] md:h-[921px] w-full flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-cover bg-center" data-alt="A cinematic wide-angle shot of a grand cathedral interior at night during Christmas. Warm golden fairy lights and flickering candles illuminate the deep navy blue stone walls, creating a majestic and spiritual atmosphere. In the center, a soft celestial glow descends from the high vaulted ceiling. The lighting is high-end, editorial, and evokes a profound sense of enlightened tranquility." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCEKvqhpuzwpFWO-hND-BI0Xtyw9RkP8rDSJ5-_Ahh1FVOZ9l6UJATlBV8e2Oy0Xl6CF25I_qHKorVzHcT9KmigvxXIa3IpcmkE36T48KWuigQRWacuDtbnStVZEQr-yROEtr7R_SJQ8gI2u5iXSIhDyy4n3yqH_BsG1lVNyhpYRkko5YQHSqxCU620SonRe5mne45i86v6qX0vcSyaTeu64iVte81s4Y6axpBdWgKLoCeoC2pBYxQROxviUvnqkpcWQX9l9xyEugue')">
+            </div>
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 sm:px-container-margin-mobile">
+            <p class="font-label-caps text-[10px] sm:text-label-caps text-secondary tracking-[0.3em] mb-2 sm:mb-4">THE SEASON OF ADVENT</p>
+            <h2 class="font-headline-lg text-[36px] sm:text-[48px] md:text-[64px] leading-tight text-primary glow-gold mb-4 sm:mb-6">The Great Joy 2025</h2>
+            <div class="flex items-center justify-center gap-3">
+                <div class="h-px w-8 sm:w-12 bg-secondary/40"></div>
+                <p class="font-headline-md text-[16px] sm:text-headline-md italic text-secondary">God With Us</p>
+                <div class="h-px w-8 sm:w-12 bg-secondary/40"></div>
+            </div>
+            <div class="mt-4 sm:mt-stack-md flex flex-col sm:flex-row gap-3 sm:gap-gutter justify-center">
+                <button class="bg-tertiary text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-label-caps text-[10px] sm:text-label-caps hover:bg-secondary transition-all">JOIN THE CELEBRATION</button>
+                <button class="border border-secondary/50 text-secondary px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-label-caps text-[10px] sm:text-label-caps hover:bg-secondary/10 transition-colors">VIEW SCHEDULE</button>
+            </div>
+        </div>
+        <div class="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 sm:gap-2 animate-bounce opacity-60">
+            <span class="font-label-caps text-[8px] sm:text-[10px] text-secondary">SCROLL TO EXPLORE</span>
+            <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">expand_more</span>
+        </div>
+    </section>
+
+    <!-- Content Wrapper -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-container-margin-mobile md:px-container-margin-desktop py-8 sm:py-stack-lg">
+        <!-- Two Column Launching Pad -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-stack-lg items-start">
+            <!-- Left Sticky Sidebar -->
+            <div class="lg:col-span-4 lg:sticky lg:top-24 flex flex-col gap-6 sm:gap-8">
+                <div class="tonal-layer-1 p-4 sm:p-8 border-l-2 border-secondary">
+                    <h3 class="font-label-caps text-[10px] sm:text-label-caps text-secondary mb-4 sm:mb-6">EVENT LOGISTICS</h3>
+                    <div class="flex flex-col gap-4 sm:gap-6">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <span class="material-symbols-outlined text-secondary mt-1 text-[20px] sm:text-[24px]">location_on</span>
+                            <div>
+                                <p class="font-label-caps text-[10px] sm:text-[12px] text-on-surface-variant">VENUE</p>
+                                <p class="font-body-lg text-[14px] sm:text-body-lg text-primary">RCK Nairobi Grounds</p>
+                                <p class="font-body-md text-[12px] sm:text-body-md text-on-surface-variant/70">Lang'ata Road, Nairobi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <span class="material-symbols-outlined text-secondary mt-1 text-[20px] sm:text-[24px]">calendar_today</span>
+                            <div>
+                                <p class="font-label-caps text-[10px] sm:text-[12px] text-on-surface-variant">DATE</p>
+                                <p class="font-body-lg text-[14px] sm:text-body-lg text-primary">December 25, 2025</p>
+                                <p class="font-body-md text-[12px] sm:text-body-md text-on-surface-variant/70">Wednesday Morning</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 sm:mt-4">
+                            <span class="pulse-indicator"></span>
+                            <span class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant">Live streaming available</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Registration Card -->
+                <div class="tonal-layer-2 p-4 sm:p-8 rounded-xl shadow-xl">
+                    <h4 class="font-headline-md text-[18px] sm:text-headline-md text-secondary mb-3 sm:mb-4">God With Us</h4>
+                    <p class="font-body-md text-[13px] sm:text-body-md text-on-surface-variant mb-4 sm:mb-6">Experience the profound peace and community of the Savior's birth. Join us for a full day of spiritual renewal and festive fellowship.</p>
+                    <button class="w-full bg-tertiary text-white py-3 sm:py-4 rounded-lg font-label-caps text-[10px] sm:text-label-caps shadow-lg hover:bg-secondary transition-all">GET YOUR INVITATION</button>
+                </div>
+            </div>
+            <!-- Right Content Scroll -->
+            <div class="lg:col-span-8 flex flex-col gap-6 sm:gap-stack-lg">
+                <!-- Itinerary Section -->
+                <div>
+                    <h3 class="font-headline-lg text-[22px] sm:text-headline-lg text-primary mb-4 sm:mb-stack-md border-b border-secondary/15 pb-3 sm:pb-4">Celebration Highlights</h3>
+                    <div class="flex flex-col gap-4 sm:gap-8">
+                        <!-- Morning Service -->
+                        <div class="group relative tonal-layer-1 p-1 w-full overflow-hidden hover:tonal-layer-2 transition-all">
+                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6">
+                                <div class="sm:w-32 flex flex-row sm:flex-col items-center sm:items-center justify-start sm:justify-center gap-3 sm:gap-0 border-b sm:border-b-0 sm:border-r border-secondary/20 pb-3 sm:pb-0 sm:pr-6">
+                                    <span class="font-headline-md text-[18px] sm:text-headline-md text-secondary">10:00</span>
+                                    <span class="font-label-caps text-[10px]">AM</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Christmas Eve Service</h4>
+                                    <p class="font-body-md text-[13px] sm:text-body-md text-on-surface-variant">A serene morning of scripture and hymns. We gather to reflect on the miraculous birth through contemplative readings and choral arrangements that echo the celestial host.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Community Feast -->
+                        <div class="group relative tonal-layer-1 p-1 w-full overflow-hidden hover:tonal-layer-2 transition-all">
+                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6">
+                                <div class="sm:w-32 flex flex-row sm:flex-col items-center sm:items-center justify-start sm:justify-center gap-3 sm:gap-0 border-b sm:border-b-0 sm:border-r border-secondary/20 pb-3 sm:pb-0 sm:pr-6">
+                                    <span class="font-headline-md text-[18px] sm:text-headline-md text-secondary">01:30</span>
+                                    <span class="font-label-caps text-[10px]">PM</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Community Feast</h4>
+                                    <p class="font-body-md text-[13px] sm:text-body-md text-on-surface-variant">Shared Luncheon at the Grace Courtyard. A time for family, friends, and newcomers to break bread together in the spirit of communal love and festive abundance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carol Night -->
+                        <div class="group relative tonal-layer-1 p-1 w-full overflow-hidden hover:tonal-layer-2 transition-all">
+                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6">
+                                <div class="sm:w-32 flex flex-row sm:flex-col items-center sm:items-center justify-start sm:justify-center gap-3 sm:gap-0 border-b sm:border-b-0 sm:border-r border-secondary/20 pb-3 sm:pb-0 sm:pr-6">
+                                    <span class="font-headline-md text-[18px] sm:text-headline-md text-secondary">04:00</span>
+                                    <span class="font-label-caps text-[10px]">PM</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Carol Night</h4>
+                                    <p class="font-body-md text-[13px] sm:text-body-md text-on-surface-variant">Joyful Melodies under the open sky. Join the RCK Worship Ministry for an evening of classic carols and contemporary praise as we welcome the night.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nativity Play -->
+                        <div class="group relative tonal-layer-1 p-1 w-full overflow-hidden hover:tonal-layer-2 transition-all">
+                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 p-4 sm:p-6">
+                                <div class="sm:w-32 flex flex-row sm:flex-col items-center sm:items-center justify-start sm:justify-center gap-3 sm:gap-0 border-b sm:border-b-0 sm:border-r border-secondary/20 pb-3 sm:pb-0 sm:pr-6">
+                                    <span class="font-headline-md text-[18px] sm:text-headline-md text-secondary">06:00</span>
+                                    <span class="font-label-caps text-[10px]">PM</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-headline-md text-[16px] sm:text-headline-md text-primary mb-1 sm:mb-2">Children's Nativity Play</h4>
+                                    <p class="font-body-md text-[13px] sm:text-body-md text-on-surface-variant">The story of old told by the young. A heartwarming performance by our Sunday School ministry, bringing the manger scene to life through the eyes of innocence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- High Fidelity Image Strip -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-4 sm:mt-stack-md">
+                    <div class="aspect-[3/4] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="A close-up high-fidelity photo of a diverse church choir singing joyfully during a Christmas service. The singers are wearing elegant white robes with gold trim, illuminated by soft warm spotlighting against a deep navy background. The mood is spiritual, corporate-minimalist, and deeply emotional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY2BORyzkfYI8uqZdv-jqHbsC_JUBd8HUc5onfeAWyQl8nLp8csrLJeoGZFqlnSAnMWZpwni0opC5U0qOENYV_2t8ja0dqjEqtfzPoqqmdvSj6Pt_IG5pPn5DErc0n6qUCE92Z5DTr2QGBgkDRakJcX1GNJET79JjdpickAd69Kt8Iw5fdZ43jQtezJmTDVk8BTDTwivuliV6h-BR4BIhWrR-qNjhyFupVquUY7z6VhL7gsqgV9LEvvLyHdRaxhobCA1RXxopST5dt"/>
+                    </div>
+                    <div class="aspect-[3/4] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 delay-100 border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="A beautiful detail shot of a rustic wooden table set for a community feast. White ceramic plates are arranged with gold cutlery and sprigs of fresh green pine and red berries. Soft golden fairy lights are blurred in the background, creating a cozy and inviting festive luncheon atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ0sFGDnaEXBeCUqLBrUMtb8EyOjfivvJ297O3uf1EvPyXPY5iRjmtR_IsWngMnu1bLa4XFI6HyoSic1XOqPcJJ1NWRMo1QN17MdSr6xhq3C5pg9KTxoJKyg5J3CX9GSrC5WchWOH6Oc3jJWxjlYUcYp4HnLcfoDvbM5_g0N1NesucLPj0KPJHS5OS3WKCKEMZ1N8-6BmiMGAcjVMk6Qnaj8lrQbhrQ6AJbrTk26GWsWollw7cE59d9YAZMRmiy6b9G0OEtFI0DDAM"/>
+                    </div>
+                    <div class="aspect-[3/4] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 delay-200 border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="A wide shot of children in simple biblically-inspired costumes performing a nativity play on a stage. The lighting is dramatic and warm, focusing on the humble manger scene. The background is a minimalist dark navy curtain with a single bright glowing star projected above." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtJsVJlITXVUFgBA_KmBS-8Yc1vEln4F99uwEMUEIQ8gyOOFuQqmuuBCWWjFiQE0uosbPp-ImleHu0cEXctr2vhEouQhwJTOp-3A8V_6TstjqWN3XHwy41HXjZdPKTZvXy6RlLHMYp9pUX8RdgVkNGrBeGkSIEfbCwVgDibf-47mhFsNRwwilMlQNwQfXoA1_fyCEcgPvm45N1I9y4m-Mb3AZpGjIQMmDWKmcdUtaZEJnUZ7ABU_ounQa7_3b9HKhamZ4MU5tYSgkO"/>
+                    </div>
+                    <div class="aspect-[3/4] rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 delay-300 border border-primary/20">
+                        <img class="w-full h-full object-cover" data-alt="An atmospheric shot of a congregation holding small glowing candles during a carol service at night. The flickering orange light reflects off the faces of people of all ages, creating a sense of peace and unity. The surrounding environment is a vast, quiet cathedral space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD96xA3aaL3xh63QUeQSFTRR-d0UQzPWz7ZNCjozco3KtdJMUe5NZL5y4COtAvFQGzXE48uy4JZldGep87eC9JfiwcA4edYXoVY28DY8FnFcCPIneoyWheLGT3oJScVvpaIJ22GabmoRCUGX9BIkbKBS-gk3PulSILOB6M2gQ0aRhBp4vRt9GeSLAlhy_Qgsvi1AWgpw9pXnNlbAZNn6F-q_3S2lpkrysYIiRij7yb-IDiMwMZJdqftMe7kx9unvRDqI7NSjdy1EqKz"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripture Quote Highlight -->
+    <section class="bg-surface-container-low py-8 sm:py-stack-lg text-center px-4 sm:px-container-margin-mobile">
+        <div class="max-w-3xl mx-auto">
+            <span class="material-symbols-outlined text-secondary text-3xl sm:text-4xl mb-4 sm:mb-6">format_quote</span>
+            <h2 class="font-headline-lg text-[20px] sm:text-headline-lg italic text-primary mb-4 sm:mb-6">"Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us."</h2>
+            <p class="font-label-caps text-[10px] sm:text-label-caps text-secondary">MATTHEW 1:23</p>
+        </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section class="w-full py-8 sm:py-stack-lg max-w-7xl mx-auto px-4 sm:px-container-margin-mobile md:px-container-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-stack-md items-center">
+            <div>
+                <h3 class="font-headline-md text-[20px] sm:text-headline-md text-primary mb-3 sm:mb-4">Join Us at the Grounds</h3>
+                <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant mb-4 sm:mb-6">We are located along Lang'ata Road, a sanctuary of peace in the heart of Nairobi. Ample secure parking and hospitality services will be available for all attendees.</p>
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <button class="bg-tertiary text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-label-caps text-[10px] sm:text-label-caps hover:bg-secondary transition-all">OPEN IN MAPS</button>
+                    <button class="border border-outline text-primary px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-label-caps text-[10px] sm:text-label-caps hover:bg-primary/10 transition-colors">TRANSPORT INFO</button>
+                </div>
+            </div>
+            <div class="h-60 sm:h-80 w-full rounded-xl overflow-hidden border border-secondary/20 shadow-2xl">
+                <div class="bg-cover bg-center w-full h-full relative" data-location="Nairobi" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwmckKDBunbP-L5wY9CfQ6ZeUXRC3A1W6VOXakCiAM_eRVwXDWtTc9smGbYodwnxXNu-L5MJ4bDpN55J1y_B-JuWAmw3obUDcV_YIpphah8o5nvIUYWnh4wztcJAaq0IXAMnu00xI1OpJcaGGhUdCmZHf0DBrmKJrBt6sDTPvc_Ix-Bzx-eEj-dNGU8Brn6OOf_D0unmJxUt4pqHVUcwc2bld2p_7mr3BCssYtV2xm4lSPRRcpi_ur4SJ9cP3kFmozo-MO0KN4QeZr')">
+                    <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <span class="material-symbols-outlined text-secondary text-4xl sm:text-5xl glow-gold" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full mt-8 sm:mt-stack-lg bg-surface-dark border-t border-secondary/30 mb-20 md:mb-0" style="background-color: #121212;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-container-margin-mobile py-8 sm:py-stack-lg">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+            <div class="col-span-1 md:col-span-2 space-y-3 sm:space-y-4">
+                <h5 class="font-label-caps text-[10px] sm:text-label-caps text-secondary mb-2 sm:mb-4">R.C.K NAIROBI</h5>
+                <p class="font-body-md text-sm sm:text-body-md text-white/60 max-w-xs">A community dedicated to the pursuit of higher purpose and spiritual excellence. Join us as we celebrate the great joy of His coming.</p>
+                <div class="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                    <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+                    <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+                    <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+                </div>
+            </div>
+            <div class="space-y-3 sm:space-y-4">
+                <h5 class="font-label-caps text-[10px] sm:text-label-caps text-secondary mb-2 sm:mb-4 border-l-2 border-secondary pl-2 sm:pl-3">QUICK LINKS</h5>
+                <ul class="flex flex-col gap-1.5 sm:gap-2 font-body-md text-sm sm:text-body-md text-white/60">
+                    <li><a class="hover:text-secondary transition-colors" href="#">Location</a></li>
+                    <li><a class="hover:text-secondary transition-colors" href="#">Service Times</a></li>
+                    <li><a class="hover:text-secondary transition-colors" href="#">Giving</a></li>
+                    <li><a class="hover:text-secondary transition-colors" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3 sm:space-y-4">
+                <h5 class="font-label-caps text-[10px] sm:text-label-caps text-secondary mb-2 sm:mb-4 border-l-2 border-secondary pl-2 sm:pl-3">SOCIALS</h5>
+                <div class="flex gap-3 sm:gap-4">
+                    <span class="material-symbols-outlined text-white/60 cursor-pointer hover:text-secondary transition-colors">public</span>
+                    <span class="material-symbols-outlined text-white/60 cursor-pointer hover:text-secondary transition-colors">movie</span>
+                    <span class="material-symbols-outlined text-white/60 cursor-pointer hover:text-secondary transition-colors">share</span>
+                </div>
+            </div>
+        </div>
+        <div class="pt-4 sm:pt-stack-md border-t border-secondary/30 mt-6 sm:mt-8">
+            <p class="font-body-md text-sm sm:text-body-md text-white/50">© 2024 R.C.K Nairobi. All Rights Reserved. "God With Us"</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2.5 pb-5 bg-primary z-50 rounded-t-full shadow-lg border-t border-secondary/30">
+    <div class="flex flex-col items-center justify-center text-white/70">
+        <span class="material-symbols-outlined text-[20px]">home</span>
+        <span class="font-label-sm text-[8px]">Home</span>
+    </div>
+    <div class="flex flex-col items-center justify-center bg-tertiary text-white rounded-full px-3 py-1 hover:bg-secondary transition-all">
+        <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+        <span class="font-label-sm text-[8px]">Events</span>
+    </div>
+    <div class="flex flex-col items-center justify-center text-white/70">
+        <span class="material-symbols-outlined text-[20px]">auto_stories</span>
+        <span class="font-label-sm text-[8px]">Sermons</span>
+    </div>
+    <div class="flex flex-col items-center justify-center text-white/70">
+        <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+        <span class="font-label-sm text-[8px]">Give</span>
+    </div>
+</nav>
+
+<script>
+    // Mobile Menu Functions
+    function openMobileMenu() {
+        document.getElementById('mobileMenu').classList.add('open');
+        document.getElementById('menuOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+        document.getElementById('mobileMenu').classList.remove('open');
+        document.getElementById('menuOverlay').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Micro-interactions for scrolling effects
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolling-header');
+        } else {
+            header.classList.remove('scrolling-header');
+        }
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+
+    // Simple intersection observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.tonal-layer-1, .tonal-layer-2').forEach(el => {
+        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
+        observer.observe(el);
+    });
+</script>
+</body></html>

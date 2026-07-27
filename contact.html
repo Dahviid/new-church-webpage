@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Grace Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    // Royal Blue - primary
+                    "primary": "#002366",
+                    "primary-container": "#e8edf5",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#002366",
+                    "on-primary-fixed-variant": "#3f446d",
+                    "primary-fixed": "#dfe0ff",
+                    "primary-fixed-dim": "#bfc3f4",
+                    "inverse-primary": "#bfc3f4",
+                    
+                    // Golden Orange - secondary
+                    "secondary": "#FF8C00",
+                    "secondary-container": "#FFF0D0",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#4a2d00",
+                    "on-secondary-fixed-variant": "#8a5a00",
+                    "secondary-fixed": "#FFD699",
+                    "secondary-fixed-dim": "#F5B84C",
+                    
+                    // Revival Red - tertiary
+                    "tertiary": "#B22222",
+                    "tertiary-container": "#F5D0D0",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#4a0d0d",
+                    "on-tertiary-fixed-variant": "#7a1a1a",
+                    "tertiary-fixed": "#FFB3B3",
+                    "tertiary-fixed-dim": "#E68080",
+                    
+                    // White base
+                    "surface": "#ffffff",
+                    "surface-container": "#f8f9fa",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface": "#1a1a1a",
+                    "on-surface-variant": "#46464e",
+                    "inverse-surface": "#2e3132",
+                    "inverse-on-surface": "#f0f1f2",
+                    
+                    // Background - white
+                    "background": "#ffffff",
+                    "on-background": "#1a1a1a",
+                    
+                    // Other colors
+                    "outline": "#77767f",
+                    "outline-variant": "#c7c5cf",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#002366",
+                    
+                    // White text for titles on dark backgrounds
+                    "on-primary-container": "#000000",
+                    "on-secondary-container": "#000000",
+                    "on-tertiary-container": "#ffffff",
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "48px",
+                    "stack-md": "16px",
+                    "container-max": "1200px",
+                    "stack-xl": "64px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["\"Source Serif 4\""],
+                    "display-lg-mobile": ["\"Source Serif 4\""],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-sm": ["\"Source Serif 4\""],
+                    "headline-md": ["\"Source Serif 4\""],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {
+                        "lineHeight": "56px",
+                        "letterSpacing": "-0.02em",
+                        "fontWeight": "700"
+                    }],
+                    "display-lg-mobile": ["36px", {
+                        "lineHeight": "44px",
+                        "fontWeight": "700"
+                    }],
+                    "label-md": ["14px", {
+                        "lineHeight": "20px",
+                        "letterSpacing": "0.05em",
+                        "fontWeight": "600"
+                    }],
+                    "body-lg": ["18px", {
+                        "lineHeight": "28px",
+                        "fontWeight": "400"
+                    }],
+                    "headline-sm": ["24px", {
+                        "lineHeight": "32px",
+                        "fontWeight": "600"
+                    }],
+                    "headline-md": ["32px", {
+                        "lineHeight": "40px",
+                        "fontWeight": "600"
+                    }],
+                    "body-md": ["16px", {
+                        "lineHeight": "24px",
+                        "fontWeight": "400"
+                    }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        .input-focus-effect:focus {
+            outline: none;
+            border-color: #002366;
+            box-shadow: 0 0 0 1px #002366;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        .scrolling-header {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        .logo-circle {
+            border-radius: 9999px !important;
+            overflow: hidden !important;
+        }
+        
+        .logo-circle img {
+            object-fit: cover !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .mobile-menu-panel {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100%;
+            background: #ffffff;
+            z-index: 1000;
+            transition: left 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-menu-panel.open {
+            left: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary selection:text-white overflow-x-hidden">
+    <!-- Subtle Background Shader -->
+    <div class="fixed inset-0 z-[-1] opacity-30 pointer-events-none">
+        <div class="absolute inset-0 w-full h-full" style="display:block;">
+            <canvas id="shader-canvas-ANIMATION_4" style="display:block;width:100%;height:100%"></canvas>
+            <script>
+            (function() {
+              const canvas = document.getElementById('shader-canvas-ANIMATION_4');
+
+              function syncSize() {
+                const w = canvas.clientWidth  || 1280;
+                const h = canvas.clientHeight || 720;
+                if (canvas.width !== w || canvas.height !== h) {
+                  canvas.width  = w;
+                  canvas.height = h;
+                }
+              }
+              if (typeof ResizeObserver !== 'undefined') {
+                new ResizeObserver(syncSize).observe(canvas);
+              }
+              syncSize();
+
+              const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+              if (!gl) return;
+              const vs = `attribute vec2 a_position;
+            varying vec2 v_texCoord;
+            void main() {
+              v_texCoord = a_position * 0.5 + 0.5;
+              gl_Position = vec4(a_position, 0.0, 1.0);
+            }`;
+              const fs = `precision highp float;
+            varying vec2 v_texCoord;
+            uniform float u_time;
+            uniform vec2 u_resolution;
+            uniform vec2 u_mouse;
+
+            void main() {
+                vec2 uv = v_texCoord;
+                vec2 mouse = u_mouse / u_resolution;
+                float wave1 = sin(uv.x * 3.0 + u_time * 0.5) * 0.5 + 0.5;
+                float wave2 = sin(uv.y * 2.0 - u_time * 0.3) * 0.5 + 0.5;
+                float dist = distance(uv, mouse);
+                vec3 color1 = vec3(0.0, 0.14, 0.40); 
+                vec3 color2 = vec3(0.0, 0.22, 0.50);
+                vec3 color3 = vec3(0.05, 0.18, 0.45);
+                float mixFactor = (wave1 * wave2) + (0.1 / (dist + 0.5));
+                vec3 finalColor = mix(color1, color2, mixFactor);
+                finalColor = mix(finalColor, color3, wave1 * 0.2);
+                gl_FragColor = vec4(finalColor, 0.08);
+            }`;
+              function cs(type, src) {
+                const s = gl.createShader(type);
+                gl.shaderSource(s, src);
+                gl.compileShader(s);
+                return s;
+              }
+              const prog = gl.createProgram();
+              gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+              gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+              gl.linkProgram(prog);
+              gl.useProgram(prog);
+              const buf = gl.createBuffer();
+              gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+              gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+              const pos = gl.getAttribLocation(prog, 'a_position');
+              gl.enableVertexAttribArray(pos);
+              gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+              const uTime = gl.getUniformLocation(prog, 'u_time');
+              const uRes = gl.getUniformLocation(prog, 'u_resolution');
+              const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+              let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+              window.addEventListener('mousemove', (event) => {
+                const rect = canvas.getBoundingClientRect();
+                if (rect.width && rect.height) {
+                  const nx = (event.clientX - rect.left) / rect.width;
+                  const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+                  mouse.x = nx * canvas.width;
+                  mouse.y = ny * canvas.height;
+                }
+              });
+              function render(t) {
+                if (typeof ResizeObserver === 'undefined') syncSize();
+                gl.viewport(0, 0, canvas.width, canvas.height);
+                if (uTime) gl.uniform1f(uTime, t * 0.001);
+                if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+                if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+                gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+                requestAnimationFrame(render);
+              }
+              render(0);
+            })();
+            </script>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu Panel -->
+    <div class="mobile-menu-panel" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8">
+            <span class="font-headline-md text-headline-md font-bold text-primary">R.C.K NAIROBI</span>
+            <button onclick="closeMobileMenu()" class="text-primary p-2">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-4">
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="about.html">About Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="ministries.html">Ministries</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="sermons.html">Sermons</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="events.html">Events</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold border-b-2 border-secondary pb-2" href="contact.html">Contact Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-on-surface hover:text-secondary transition-colors pb-2 border-b border-primary/10" href="gallery.html">Gallery</a>
+            <a class="mt-4 inline-block px-6 py-3 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-center" href="#give">GIVE</a>
+        </nav>
+        <div class="mt-8 pt-6 border-t border-primary/10">
+            <div class="flex items-center gap-3 text-on-surface-variant">
+                <span class="material-symbols-outlined text-secondary">location_on</span>
+                <span class="text-sm">NAIROBI, KENYA</span>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Utility Top Bar -->
+    <div class="bg-primary text-white py-1.5 sm:py-2 px-3 sm:px-gutter relative z-[60]">
+        <div class="max-w-container-max mx-auto flex flex-wrap justify-between items-center text-[10px] sm:text-[12px] font-label-md tracking-wider gap-1 sm:gap-0">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px] sm:text-[16px] text-secondary">location_on</span>
+                    <span class="hidden xs:inline">NAIROBI, KENYA</span>
+                    <span class="inline xs:hidden">NAIROBI</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3 md:gap-4 border-l border-white/20 pl-3 md:pl-4">
+                    <a class="hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+                    <a class="hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+                    <a class="hover:text-secondary transition-colors" href="#">YOUTUBE</a>
+                </div>
+            </div>
+            <a class="flex items-center gap-1 sm:gap-2 bg-tertiary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white font-bold hover:bg-secondary transition-all hover:scale-105 text-[9px] sm:text-[12px]" href="#">
+                <span class="material-symbols-outlined text-[12px] sm:text-[16px]">live_tv</span> 
+                <span class="hidden xs:inline">WATCH LIVE</span>
+                <span class="inline xs:hidden">LIVE</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="fixed top-[36px] sm:top-[40px] left-0 w-full z-50 glass-nav border-b border-primary/20 h-16 sm:h-20">
+        <nav class="max-w-container-max mx-auto px-3 sm:px-gutter py-2 sm:py-4 flex justify-between items-center h-full">
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-1" onclick="openMobileMenu()">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <!-- Nav Links Left -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-end pr-4 lg:pr-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="index.html">HOME</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="about.html">ABOUT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="ministries.html">MINISTRIES</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="sermons.html">SERMONS</a>
+            </div>
+            <!-- Brand Identity - Central Overlapping Circular Logo Container -->
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] md:w-[120px] md:h-[120px] lg:w-[140px] lg:h-[140px] bg-white rounded-full border-4 border-secondary shadow-lg flex flex-col items-center justify-center overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 -mb-4 sm:-mb-6 md:-mb-8 logo-circle">
+                    <div class="w-full h-full bg-surface-container flex items-center justify-center group cursor-pointer overflow-hidden logo-circle">
+                        <img src="img/churchlogo.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" alt="#">
+                    </div>
+                </div>
+                <div class="absolute -bottom-8 sm:-bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 text-center w-full md:hidden">
+                    <span class="text-[8px] sm:text-[10px] font-label-md tracking-[0.3em] text-secondary uppercase">NAIROBI</span>
+                </div>
+            </div>
+            <!-- Nav Links Right -->
+            <div class="hidden md:flex items-center gap-4 lg:gap-6 font-label-md text-label-md text-primary flex-1 justify-start pl-4 lg:pl-8">
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="events.html">EVENTS</a>
+                <a class="border-b-2 border-secondary font-bold text-secondary text-sm lg:text-base" href="contact.html">CONTACT US</a>
+                <a class="hover:text-secondary transition-colors text-sm lg:text-base" href="gallery.html">GALLERY</a>
+                <a class="inline-block px-4 lg:px-6 py-1.5 lg:py-2 bg-tertiary text-white rounded-full hover:bg-secondary transition-all font-bold text-xs lg:text-sm" href="#give">GIVE</a>
+            </div>
+            <!-- Mobile Action -->
+            <div class="md:hidden flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[20px] sm:text-[24px]">volunteer_activism</span>
+                <span class="material-symbols-outlined text-secondary text-[20px] sm:text-[24px]">location_on</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative min-h-screen pt-[70px] sm:pt-[80px] md:pt-[140px] pb-8 sm:pb-stack-xl px-4 sm:px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-gutter items-start">
+            <!-- Section 1: Contact Details -->
+            <section class="fade-in-up delay-100 flex flex-col gap-6 sm:gap-stack-lg">
+                <div>
+                    <h1 class="font-headline-xl text-[28px] sm:text-headline-xl text-primary mb-4 sm:mb-stack-md">Connect With Our Community</h1>
+                    <p class="font-body-lg text-sm sm:text-body-lg text-on-surface-variant max-w-md">
+                        Whether you have a question about our services, need prayer, or want to visit us, we are here to walk with you.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4 sm:gap-6 mt-2 sm:mt-4">
+                    <!-- Address -->
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-surface-container-high text-secondary flex-shrink-0">
+                            <span class="material-symbols-outlined text-[18px] sm:text-[24px]">location_on</span>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-[10px] sm:text-label-md uppercase tracking-wider text-on-surface-variant">Sanctuary Location</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-primary mt-1">123 Grace Way,<br/>Cathedral City, CA 92234</p>
+                        </div>
+                    </div>
+                    <!-- Phone -->
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-surface-container-high text-secondary flex-shrink-0">
+                            <span class="material-symbols-outlined text-[18px] sm:text-[24px]">call</span>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-[10px] sm:text-label-md uppercase tracking-wider text-on-surface-variant">Main Office</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-primary mt-1">(555) 0123-4567</p>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="flex items-start gap-3 sm:gap-4">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-surface-container-high text-secondary flex-shrink-0">
+                            <span class="material-symbols-outlined text-[18px] sm:text-[24px]">mail</span>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-[10px] sm:text-label-md uppercase tracking-wider text-on-surface-variant">Email Correspondence</h3>
+                            <p class="font-body-md text-sm sm:text-body-md text-primary mt-1">R.C.K Nairobi@gmail.org</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Social Media -->
+                <div class="mt-3 sm:mt-stack-md">
+                    <h3 class="font-label-md text-[10px] sm:text-label-md uppercase tracking-wider text-on-surface-variant mb-3 sm:mb-4">Follow Our Journey</h3>
+                    <div class="flex gap-3 sm:gap-4">
+                        <a class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-primary" href="#">
+                            <span class="material-symbols-outlined text-[18px] sm:text-[24px]">public</span>
+                        </a>
+                        <a class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-primary" href="#">
+                            <span class="material-symbols-outlined text-[18px] sm:text-[24px]">camera</span>
+                        </a>
+                        <a class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-primary/20 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-primary" href="#">
+                            <span class="material-symbols-outlined text-[18px] sm:text-[24px]">play_circle</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Subtle Image/Map Decor -->
+                <div class="mt-4 sm:mt-8 rounded-xl overflow-hidden shadow-sm h-40 sm:h-48 relative border border-primary/20">
+                    <img class="w-full h-full object-cover" data-alt="A serene, minimalist architectural photograph of a modern church sanctuary entrance with clean white walls and soft morning sunlight casting long, peaceful shadows. The style is editorial and high-end, reflecting sacred modernity and architectural precision. The lighting is bright and warm, emphasizing the white textures and minimalist landscaping." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBeQlpFGSMs1oZWPZIi-KE-SVUyt2XSuFbFOyOpH9e3nUfqdCQlbIPCYQNaN8mH7rW-DtzG9lkFT5bbXHtFe-PxLQyew6exfH2IJ4inQaw5Bco2mnH2gGw_00M89F5_2Flwf4Ck1VeXsqtLKUvaeh2bf-Jpus7Z3LBFWxQchgB7GyXmIED6_qCbS_I2z3egQoFYih3m1v_RtUkO0lwI5lEoOPHyFZK_u66OAwY9QlqN8piuoKj-B0j"/>
+                    <div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+                        <span class="bg-surface px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-label-md text-[10px] sm:text-label-md text-primary flex items-center gap-1 sm:gap-2 shadow-md border border-primary/20">
+                            <span class="material-symbols-outlined text-[14px] sm:text-[18px] text-secondary">map</span> View Full Map
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 2: Contact Form -->
+            <section class="fade-in-up delay-300 bg-surface-container-lowest p-4 sm:p-stack-lg md:p-margin-desktop rounded-xl border border-primary/20 shadow-sm">
+                <form class="flex flex-col gap-4 sm:gap-stack-md" id="contact-form" onsubmit="event.preventDefault(); alert('Message sent with grace.');">
+                    <div class="mb-2 sm:mb-4">
+                        <h2 class="font-headline-md text-[18px] sm:text-headline-md text-primary mb-1 sm:mb-2">Send a Message</h2>
+                        <p class="font-body-md text-sm sm:text-body-md text-on-surface-variant">Our ministry team typically responds within 24–48 hours.</p>
+                    </div>
+                    <div class="grid grid-cols-1 gap-3 sm:gap-gutter">
+                        <div class="flex flex-col gap-1.5 sm:gap-2">
+                            <label class="font-label-md text-[10px] sm:text-label-md text-on-surface-variant" for="name">Full Name</label>
+                            <input class="bg-transparent border border-primary/20 rounded-lg p-2.5 sm:p-3 font-body-md text-sm sm:text-base input-focus-effect transition-all" id="name" placeholder="Enter your name" required="" type="text"/>
+                        </div>
+                        <div class="flex flex-col gap-1.5 sm:gap-2">
+                            <label class="font-label-md text-[10px] sm:text-label-md text-on-surface-variant" for="email">Email Address</label>
+                            <input class="bg-transparent border border-primary/20 rounded-lg p-2.5 sm:p-3 font-body-md text-sm sm:text-base input-focus-effect transition-all" id="email" placeholder="email@example.com" required="" type="email"/>
+                        </div>
+                        <div class="flex flex-col gap-1.5 sm:gap-2">
+                            <label class="font-label-md text-[10px] sm:text-label-md text-on-surface-variant" for="subject">Subject</label>
+                            <select class="bg-transparent border border-primary/20 rounded-lg p-2.5 sm:p-3 font-body-md text-sm sm:text-base input-focus-effect transition-all" id="subject">
+                                <option>General Inquiry</option>
+                                <option>Prayer Request</option>
+                                <option>Membership &amp; Community</option>
+                                <option>Giving Support</option>
+                                <option>Volunteer Opportunities</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-1.5 sm:gap-2">
+                            <label class="font-label-md text-[10px] sm:text-label-md text-on-surface-variant" for="message">How can we help you?</label>
+                            <textarea class="bg-transparent border border-primary/20 rounded-lg p-2.5 sm:p-3 font-body-md text-sm sm:text-base input-focus-effect transition-all" id="message" placeholder="Your message here..." required="" rows="4 sm:5"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-2 sm:mt-4">
+                        <button class="w-full bg-tertiary text-white p-3 sm:p-4 rounded-lg font-label-md text-xs sm:text-label-md hover:bg-secondary transition-all duration-300 transform active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+                            Submit Message <span class="material-symbols-outlined text-[16px] sm:text-[18px]">send</span>
+                        </button>
+                    </div>
+                    <div class="mt-2 sm:mt-4 flex items-start gap-2 sm:gap-3">
+                        <input class="mt-0.5 sm:mt-1 rounded-sm border-primary/20 text-primary focus:ring-primary" id="newsletter" type="checkbox"/>
+                        <label class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant" for="newsletter">
+                            I would like to receive weekly spiritual reflections and community updates via email.
+                        </label>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full mt-8 sm:mt-stack-xl bg-surface-dark border-t border-secondary/30" style="background-color: #121212;">
+        <div class="max-w-container-max mx-auto px-4 sm:px-margin-desktop py-6 sm:py-stack-lg">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-gutter">
+                <div class="col-span-1 md:col-span-1 space-y-3 sm:space-y-4">
+                    <div class="font-headline-sm text-[18px] sm:text-headline-sm text-secondary">Grace Sanctuary</div>
+                    <p class="text-white/60 font-body-md text-sm sm:text-base max-w-xs">A vibrant community of believers dedicated to worship, fellowship, and service.</p>
+                    <div class="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">face_nod</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+                        <a class="text-white/60 hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+                    </div>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="text-white font-label-md text-[10px] sm:text-label-md uppercase tracking-wider border-l-2 border-secondary pl-2 sm:pl-3">Quick Links</h4>
+                    <ul class="space-y-1.5 sm:space-y-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Location</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Service Times</a></li>
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="text-white font-label-md text-[10px] sm:text-label-md uppercase tracking-wider border-l-2 border-secondary pl-2 sm:pl-3">Support</h4>
+                    <ul class="space-y-1.5 sm:space-y-2">
+                        <li><a class="text-white/60 hover:text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Privacy Policy</a></li>
+                        <li><a class="text-secondary font-body-md text-sm sm:text-base transition-colors hover:underline" href="#">Give</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-3 sm:space-y-4">
+                    <h4 class="text-white font-label-md text-[10px] sm:text-label-md uppercase tracking-wider border-l-2 border-secondary pl-2 sm:pl-3">Follow Us</h4>
+                    <div class="flex gap-3 sm:gap-4">
+                        <a class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all" href="#">
+                            <span class="material-symbols-outlined text-[16px] sm:text-[20px]">face_nod</span>
+                        </a>
+                        <a class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-all" href="#">
+                            <span class="material-symbols-outlined text-[16px] sm:text-[20px]">share</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 sm:mt-stack-lg pt-4 sm:pt-8 border-t border-secondary/30 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-0">
+                <p class="text-white/60 font-body-md text-xs sm:text-sm">© 2026 R.C.K Nairobi Church. All rights reserved.</p>
+                <div class="flex items-center gap-4 sm:gap-8 text-white/60 text-xs sm:text-sm">
+                    <a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+                    <a class="hover:text-secondary transition-colors" href="#">Member Portal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functions
+        function openMobileMenu() {
+            document.getElementById('mobileMenu').classList.add('open');
+            document.getElementById('menuOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('menuOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Micro-interaction for input floating labels or states
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').classList.add('text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').classList.remove('text-primary');
+            });
+        });
+
+        // Simple Intersection Observer to trigger entrance animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Scrolling header effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolling-header');
+            } else {
+                header.classList.remove('scrolling-header');
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body></html>
